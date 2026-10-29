@@ -939,6 +939,23 @@ const esc = s => String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">
 const fmtDate = ts => ts ? new Date(ts).toLocaleString(state.lang==="hi"?"hi-IN":state.lang==="te"?"te-IN":"en-IN") : "—";
 const fmtDay = ts => ts ? new Date(ts).toLocaleDateString(state.lang==="hi"?"hi-IN":state.lang==="te"?"te-IN":"en-IN") : "—";
 const shortUid = u => (u||"").slice(0,8);
+
+// Formats timestamp as "28-10-2026 11:54:00 PM"
+function formatEventDateTime(ts) {
+    if (!ts) return "—";
+    const d = new Date(ts);
+    const pad = n => String(n).padStart(2, '0');
+    
+    let hours = d.getHours();
+    const minutes = pad(d.getMinutes());
+    const seconds = pad(d.getSeconds());
+    const ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    
+    return `${pad(d.getDate())}-${pad(d.getMonth() + 1)}-${d.getFullYear()} ${pad(hours)}:${minutes}:${seconds} ${ampm}`;
+}
+
 function newId(p){const r=crypto.getRandomValues(new Uint8Array(9));const b=btoa(String.fromCharCode(...r)).replace(/[+/=]/g,"").slice(0,12);return `${p}_${b}`}
 function newPatientId(){const r=crypto.getRandomValues(new Uint8Array(6));const b=btoa(String.fromCharCode(...r)).replace(/[+/=]/g,"").slice(0,8).toUpperCase();return `PAT_${b}`}
 function normalizePatientId(raw){return String(raw||"").trim().toUpperCase().replace(/\s+/g,"_")}
@@ -1086,7 +1103,7 @@ $("#signUpForm").addEventListener("submit",async e=>{
     const initialRole = isAdmin ? "admin" : (isDoc ? "doctor" : "patient");
     const pendingReq = (!isP && !isDoc && !isAdmin); // Only pharmacists need approval now
     
-    const profile={uid,displayName:$("#suName").value.trim()||"Demo User",email,role:initialRole,requestedRole:pendingReq?role:null,status:"active",createdAt:Date.now(),autoConsentToPharmacists:true,pharmacyName:isPh?($("#suPharmName").value.trim()||""):null,pharmacyLocation:isPh?($("#suPharmLoc").value.trim()||""):null};
+    const profile={uid,displayName:$("#suName").value.trim()||"Demo User",email,role:initialRole,requestedRole:pendingReq?role:null,status:"active",createdAt:Date.now(),createdAtStr:formatEventDateTime(Date.now()),autoConsentToPharmacists:true,pharmacyName:isPh?($("#suPharmName").value.trim()||""):null,pharmacyLocation:isPh?($("#suPharmLoc").value.trim()||""):null};
     if(isP){
       profile.age=$("#suAge").value?Number($("#suAge").value):null;
       profile.weightKg=$("#suWeight").value?Number($("#suWeight").value):null;
@@ -1103,7 +1120,7 @@ $("#signUpForm").addEventListener("submit",async e=>{
       }
     }
     await set(ref(db,dbPath(`users/${uid}`)),profile);
-    if(pendingReq){const rid=newId("REQ");await set(ref(db,dbPath(`roleRequests/${rid}`)),{id:rid,uid,email,requestedRole:role,pharmacyName:$("#suPharmName").value.trim()||"",pharmacyLocation:$("#suPharmLoc").value.trim()||"",status:"pending",createdAt:Date.now()});toast(t("msg_pending"),"ok",6000)}else{toast(t("msg_account_created"),"ok")}
+    if(pendingReq){const rid=newId("REQ");await set(ref(db,dbPath(`roleRequests/${rid}`)),{id:rid,uid,email,requestedRole:role,pharmacyName:$("#suPharmName").value.trim()||"",pharmacyLocation:$("#suPharmLoc").value.trim()||"",status:"pending",createdAt:Date.now(),createdAtStr:formatEventDateTime(Date.now())});toast(t("msg_pending"),"ok",6000)}else{toast(t("msg_account_created"),"ok")}
     try{await sendEmailVerification(cred.user)}catch{}
   } catch(err){
     toast(authErr(err),"err");
@@ -1144,6 +1161,7 @@ $("#kioskOtpBtn").onclick = async () => {
             role: "patient",
             status: "active",
             createdAt: Date.now(),
+            createdAtStr: formatEventDateTime(Date.now()),
             autoConsentToPharmacists: true,
             demo: true,
             age: 34,
@@ -1242,7 +1260,7 @@ function showReminderToast(rxId, mId, medName, medDosage) {
       const currentLog = state.profile.doseLog && state.profile.doseLog.date === todayKey ? state.profile.doseLog.items || {} : {};
       const next = { ...currentLog, [`${rxId}_${mId}`]: (Number(currentLog[`${rxId}_${mId}`]) || 0) + 1 };
       
-      await update(ref(db, dbPath(`users/${state.user.uid}`)), { doseLog: { date: todayKey, items: next } });
+      await update(ref(db, dbPath(`users/${state.user.uid}`)), { doseLog: { date: todayKey, items: next, lastUpdated: formatEventDateTime(Date.now()) } });
       state.profile.doseLog = { date: todayKey, items: next };
       toast(t("notif_logged"), "ok");
       el.remove();
@@ -1286,7 +1304,7 @@ onAuthStateChanged(auth,async user=>{
   state.user=user;try{await reload(user)}catch{}
   let snap;try{snap=await get(ref(db,dbPath(`users/${user.uid}`)))}catch(err){toast("Cannot read profile: "+err.message,"err");return signOut(auth)}
   let profile;
-  if(!snap.exists()){profile={uid:user.uid,displayName:user.email.split("@")[0]||"Demo User",email:user.email,role:user.uid===PRESET_ADMIN_UID?"admin":"patient",requestedRole:null,status:"active",createdAt:Date.now(),autoConsentToPharmacists:true};try{await set(ref(db,dbPath(`users/${user.uid}`)),profile)}catch(e){toast("Could not create profile: "+e.message,"err");return signOut(auth)}}else{profile=snap.val()}
+  if(!snap.exists()){profile={uid:user.uid,displayName:user.email.split("@")[0]||"Demo User",email:user.email,role:user.uid===PRESET_ADMIN_UID?"admin":"patient",requestedRole:null,status:"active",createdAt:Date.now(),createdAtStr:formatEventDateTime(Date.now()),autoConsentToPharmacists:true};try{await set(ref(db,dbPath(`users/${user.uid}`)),profile)}catch(e){toast("Could not create profile: "+e.message,"err");return signOut(auth)}}else{profile=snap.val()}
   if(user.uid===PRESET_ADMIN_UID&&profile.role!=="admin"){try{await update(ref(db,dbPath(`users/${user.uid}`)),{role:"admin",status:"active"});profile.role="admin";profile.status="active"}catch(e){}}
   state.profile=profile;
   if(profile.status==="suspended"){toast("Account suspended.","err",6000);return signOut(auth)}
@@ -1404,7 +1422,7 @@ document.addEventListener("click", (e) => {
 });
 
 /* ================= Shared helpers ================= */
-async function logAudit(action,targetId,extra={}){const uid=auth.currentUser?.uid;if(!uid)return;const id=newId("AUD");try{await set(ref(db,dbPath(`auditLogs/${id}`)),{id,actorUid:uid,action,targetId:targetId||null,timestamp:Date.now(),...extra})}catch(e){}}
+async function logAudit(action,targetId,extra={}){const uid=auth.currentUser?.uid;if(!uid)return;const id=newId("AUD");try{await set(ref(db,dbPath(`auditLogs/${id}`)),{id,actorUid:uid,action,targetId:targetId||null,timestamp:Date.now(),timestampStr:formatEventDateTime(Date.now()),...extra})}catch(e){}}
 async function getProfile(uid){const s=await get(ref(db,dbPath(`users/${uid}`)));return s.exists()?s.val():null}
 function statCard(label,value,chip,attrs=""){return `<div class="card" ${attrs}><h3>${esc(label)}</h3><div class="stat">${esc(value)}</div>${chip?`<div class="chip ${chip.t}">${esc(chip.l)}</div>`:""}</div>`}
 async function checkAntibioticRisk(uid){const s=await get(ref(db,dbPath("prescriptions")));const all=s.val()||{};const mine=Object.values(all).filter(r=>r.patientUid===uid);const now=Date.now();const active=mine.filter(r=>r.status==="active"&&(!r.expiresAt||r.expiresAt>now));let meds=0;for(const r of active)for(const m of Object.values(r.medicines||{})){if(m.expiry&&m.expiry<now)continue;meds++}return{activeRxCount:active.length,activeMeds:meds}}
@@ -1447,7 +1465,7 @@ async function patientView(page){
       if(!name||!openedDate||!afterOpeningUseBy||!packExpiry){toast(t("opened_need"),"err");return;}
       if(afterOpeningUseBy<openedDate||packExpiry<openedDate){toast(t("opened_need"),"err");return;}
       const id=newId("OPEN");
-      try{await set(ref(db,dbPath(`users/${uid}/openedMedicines/${id}`)),{id,name,openedDate,afterOpeningUseBy,packExpiry,createdAt:Date.now()});toast(t("opened_saved"),"ok");await goTo("patient","opened");}
+      try{await set(ref(db,dbPath(`users/${uid}/openedMedicines/${id}`)),{id,name,openedDate,afterOpeningUseBy,packExpiry,createdAt:Date.now(),createdAtStr:formatEventDateTime(Date.now())});toast(t("opened_saved"),"ok");await goTo("patient","opened");}
       catch(err){toast(err.message,"err");}
     };
     $$('[data-opened-delete]').forEach(btn=>btn.onclick=async()=>{try{await remove(ref(db,dbPath(`users/${uid}/openedMedicines/${btn.dataset.openedDelete}`)));await goTo("patient","opened");}catch(err){toast(err.message,"err");}});
@@ -1666,7 +1684,7 @@ async function patientView(page){
         const key = `${rxId}_${mId}`;
         const next = { ...savedLog, [key]: (Number(savedLog[key]) || 0) + 1 };
         try {
-          await update(ref(db, dbPath(`users/${uid}`)), { doseLog: { date: todayKey, items: next } });
+          await update(ref(db, dbPath(`users/${uid}`)), { doseLog: { date: todayKey, items: next, lastUpdated: formatEventDateTime(Date.now()) } });
           toast("Dose logged.", "ok");
           goTo("patient", "reminders");
         } catch (e) { toast(e.message, "err"); }
@@ -1679,7 +1697,7 @@ async function patientView(page){
         const key = `${rxId}_${mId}`;
         const next = { ...savedLog, [key]: Math.max(0, (Number(savedLog[key]) || 0) - 1) };
         try {
-          await update(ref(db, dbPath(`users/${uid}`)), { doseLog: { date: todayKey, items: next } });
+          await update(ref(db, dbPath(`users/${uid}`)), { doseLog: { date: todayKey, items: next, lastUpdated: formatEventDateTime(Date.now()) } });
           goTo("patient", "reminders");
         } catch (e) { toast(e.message, "err"); }
       };
@@ -1689,7 +1707,7 @@ async function patientView(page){
     if (resetBtn) resetBtn.onclick = async () => {
       if (!confirm("Reset today's dose log?")) return;
       try {
-        await update(ref(db, dbPath(`users/${uid}`)), { doseLog: { date: todayKey, items: {} } });
+        await update(ref(db, dbPath(`users/${uid}`)), { doseLog: { date: todayKey, items: {}, lastUpdated: formatEventDateTime(Date.now()) } });
         goTo("patient", "reminders");
       } catch (e) { toast(e.message, "err"); }
     };
@@ -1746,7 +1764,8 @@ async function patientView(page){
           age:$("#pAge").value?Number($("#pAge").value):null,
           weightKg:$("#pWeight").value?Number($("#pWeight").value):null,
           disease:$("#pDisease").value.trim()||null,
-          patientId: normalizePatientId($("#pPatId").value)
+          patientId: normalizePatientId($("#pPatId").value),
+          lastUpdated: formatEventDateTime(Date.now())
         };
         await update(ref(db,dbPath(`users/${uid}`)),patch);
         Object.assign(state.profile,patch);
@@ -1868,7 +1887,7 @@ async function doctorView(page){
     views.innerHTML=`<div class="panel"><h2>${esc(t("page_profile"))}</h2>
       <div class="row"><div class="col"><label>${esc(t("display_name"))}</label><input id="pName" value="${esc(p.displayName||"")}" /></div><div class="col"><label>${esc(t("email"))}</label><input value="${esc(p.email||"")}" disabled /></div></div>
       <div style="margin-top:12px"><button class="btn" id="saveProfile">${esc(t("save"))}</button></div></div>`;
-    $("#saveProfile").onclick=async()=>{try{const patch={displayName:$("#pName").value.trim()};await update(ref(db,dbPath(`users/${uid}`)),patch);Object.assign(state.profile,patch);$("#whoName").textContent=patch.displayName||auth.currentUser.email;toast(t("msg_profile_saved"),"ok")}catch(e){toast(e.message,"err")}};
+    $("#saveProfile").onclick=async()=>{try{const patch={displayName:$("#pName").value.trim(),lastUpdated:formatEventDateTime(Date.now())};await update(ref(db,dbPath(`users/${uid}`)),patch);Object.assign(state.profile,patch);$("#whoName").textContent=patch.displayName||auth.currentUser.email;toast(t("msg_profile_saved"),"ok")}catch(e){toast(e.message,"err")}};
     return;
   }
 }
@@ -2023,11 +2042,15 @@ function renderDoctorRxForm(patient, container) {
       source: "doctor",
       status: "pending_dispense", // Doctor prescriptions must be dispensed by pharmacist
       issuedAt: Date.now(),
+      issuedAtStr: formatEventDateTime(Date.now()),
       expiresAt,
+      expiresAtStr: formatEventDateTime(expiresAt),
       instructions: ($("#docInstructions").value || "").trim(),
       medicines,
       createdAt: Date.now(),
-      updatedAt: Date.now()
+      createdAtStr: formatEventDateTime(Date.now()),
+      updatedAt: Date.now(),
+      updatedAtStr: formatEventDateTime(Date.now())
     };
 
     const btn = $("#docSaveRx");
@@ -2221,7 +2244,7 @@ async function pharmacistView(page){
       <div class="row"><div class="col"><label>${esc(t("pharmacy_name"))}</label><input id="phName" value="${esc(p.pharmacyName||"")}" /></div><div class="col"><label>${esc(t("pharmacy_location"))}</label><input id="phLoc" value="${esc(p.pharmacyLocation||"")}" /></div></div>
       <div class="row" style="margin-top:10px"><div class="col"><label>${esc(t("display_name"))}</label><input id="phDisp" value="${esc(p.displayName||"")}" /></div><div class="col"><label>${esc(t("email"))}</label><input value="${esc(p.email||"")}" disabled /></div></div>
       <div style="margin-top:12px"><button class="btn" id="savePharm">${esc(t("save"))}</button></div></div>`;
-    $("#savePharm").onclick=async()=>{try{const patch={pharmacyName:$("#phName").value.trim(),pharmacyLocation:$("#phLoc").value.trim(),displayName:$("#phDisp").value.trim()};await update(ref(db,dbPath(`users/${uid}`)),patch);Object.assign(state.profile,patch);$("#whoName").textContent=patch.displayName||auth.currentUser.email;toast(t("msg_pharmacy_saved"),"ok")}catch(e){toast(e.message,"err")}};
+    $("#savePharm").onclick=async()=>{try{const patch={pharmacyName:$("#phName").value.trim(),pharmacyLocation:$("#phLoc").value.trim(),displayName:$("#phDisp").value.trim(),lastUpdated:formatEventDateTime(Date.now())};await update(ref(db,dbPath(`users/${uid}`)),patch);Object.assign(state.profile,patch);$("#whoName").textContent=patch.displayName||auth.currentUser.email;toast(t("msg_pharmacy_saved"),"ok")}catch(e){toast(e.message,"err")}};
     return;
   }
 
@@ -2250,16 +2273,17 @@ async function dispense(rxId,expired,revoked,consentOk){
   if(!confirm(t("msg_confirm_dispense")))return;
   try{
     const markerRef=ref(db,dbPath(`dispensingEvents/${rxId}/_single_use`));
-    const result=await runTransaction(markerRef,cur=>cur===null?{createdAt:Date.now(),pharmacistUid:auth.currentUser.uid}:undefined);
+    const result=await runTransaction(markerRef,cur=>cur===null?{createdAt:Date.now(),createdAtStr:formatEventDateTime(Date.now()),pharmacistUid:auth.currentUser.uid}:undefined);
     if(!result.committed)return toast(t("msg_already_dispensed"),"err");
     const evId=newId("EVT");const pp=state.profile||{};
-    await set(ref(db,dbPath(`dispensingEvents/${rxId}/${evId}`)),{id:evId,pharmacistUid:auth.currentUser.uid,pharmacistName:pp.displayName||"",pharmacyName:pp.pharmacyName||"",pharmacyLocation:pp.pharmacyLocation||"",status:"demo_recorded",createdAt:Date.now()});
+    await set(ref(db,dbPath(`dispensingEvents/${rxId}/${evId}`)),{id:evId,pharmacistUid:auth.currentUser.uid,pharmacistName:pp.displayName||"",pharmacyName:pp.pharmacyName||"",pharmacyLocation:pp.pharmacyLocation||"",status:"demo_recorded",createdAt:Date.now(),createdAtStr:formatEventDateTime(Date.now())});
     
     // Update prescription to active
     await update(ref(db,dbPath(`prescriptions/${rxId}`)),{
       status: "active",
       dispensedByUid:auth.currentUser.uid,
       dispensedAt:Date.now(),
+      dispensedAtStr:formatEventDateTime(Date.now()),
       dispensedByName:pp.displayName||"",
       dispensedByPharmacy:pp.pharmacyName||"",
       dispensedByLocation:pp.pharmacyLocation||""
@@ -2346,23 +2370,23 @@ async function seedDemoData(){
       {uid:"demo_patient_2",displayName:"Demo Bob",email:"bob@demo.local",age:52,weightKg:80,disease:"urinary infection",patientId:"PAT_DEMO2"},
       {uid:"demo_patient_3",displayName:"Demo Carla",email:"carla@demo.local",age:27,weightKg:55,disease:"skin infection",patientId:"PAT_DEMO3"}
     ];
-    for(const p of demoPatients){await set(ref(db,dbPath(`users/${p.uid}`)),{uid:p.uid,displayName:p.displayName,email:p.email,role:"patient",status:"active",createdAt:now,autoConsentToPharmacists:true,demo:true,age:p.age,weightKg:p.weightKg,disease:p.disease,patientId:p.patientId});await set(ref(db,dbPath(`patientIds/${p.patientId}`)),p.uid)}
-    const dp={uid:"demo_pharm_1",displayName:"Demo Pharmacist",email:"pharm@demo.local",role:"pharmacist",status:"active",pharmacyName:"Demo Pharmacy Central",pharmacyLocation:"Demo City",createdAt:now,demo:true};
+    for(const p of demoPatients){await set(ref(db,dbPath(`users/${p.uid}`)),{uid:p.uid,displayName:p.displayName,email:p.email,role:"patient",status:"active",createdAt:now,createdAtStr:formatEventDateTime(now),autoConsentToPharmacists:true,demo:true,age:p.age,weightKg:p.weightKg,disease:p.disease,patientId:p.patientId});await set(ref(db,dbPath(`patientIds/${p.patientId}`)),p.uid)}
+    const dp={uid:"demo_pharm_1",displayName:"Demo Pharmacist",email:"pharm@demo.local",role:"pharmacist",status:"active",pharmacyName:"Demo Pharmacy Central",pharmacyLocation:"Demo City",createdAt:now,createdAtStr:formatEventDateTime(now),demo:true};
     await set(ref(db,dbPath(`users/${dp.uid}`)),dp);
-    const dd={uid:"demo_doc_1",displayName:"Demo Doctor",email:"doc@demo.local",role:"doctor",status:"active",createdAt:now,demo:true};
+    const dd={uid:"demo_doc_1",displayName:"Demo Doctor",email:"doc@demo.local",role:"doctor",status:"active",createdAt:now,createdAtStr:formatEventDateTime(now),demo:true};
     await set(ref(db,dbPath(`users/${dd.uid}`)),dd);
     
     const med=(name,dose,freq,dur,qty,exp,m,a,e)=>({name,dosage:dose,frequency:freq,duration:dur,quantity:qty,expiry:exp,morning:m,afternoon:a,evening:e,notes:""});
     const demoRx=[
-      {id:"RX_DEMO0001",patientUid:"demo_patient_1",createdByUid:auth.currentUser.uid,status:"active",issuedAt:now-2*DAY,expiresAt:now+5*DAY,medicines:{m1:med("Demo-Amoxicillin","500 mg","TID","5 days","15",now+5*DAY,true,true,true),m2:med("Demo-Azithromycin","250 mg","OD","3 days","3",now+3*DAY,false,false,true)},instructions:"Take with food.",createdAt:now-2*DAY,updatedAt:now-2*DAY},
-      {id:"RX_DEMO0002",patientUid:"demo_patient_2",createdByUid:auth.currentUser.uid,status:"active",issuedAt:now-1*DAY,expiresAt:now+6*DAY,medicines:{m1:med("Demo-Ciprofloxacin","500 mg","BID","7 days","14",now+6*DAY,true,false,true)},instructions:"",createdAt:now-1*DAY,updatedAt:now-1*DAY},
-      {id:"RX_DEMO0003",patientUid:"demo_patient_3",createdByUid:auth.currentUser.uid,status:"pending_dispense",issuedAt:now,expiresAt:now+7*DAY,medicines:{m1:med("Demo-Doxycycline","100 mg","BID","7 days","14",now+7*DAY,true,false,true)},instructions:"Avoid dairy.",createdAt:now,updatedAt:now}
+      {id:"RX_DEMO0001",patientUid:"demo_patient_1",createdByUid:auth.currentUser.uid,status:"active",issuedAt:now-2*DAY,issuedAtStr:formatEventDateTime(now-2*DAY),expiresAt:now+5*DAY,expiresAtStr:formatEventDateTime(now+5*DAY),medicines:{m1:med("Demo-Amoxicillin","500 mg","TID","5 days","15",now+5*DAY,true,true,true),m2:med("Demo-Azithromycin","250 mg","OD","3 days","3",now+3*DAY,false,false,true)},instructions:"Take with food.",createdAt:now-2*DAY,createdAtStr:formatEventDateTime(now-2*DAY),updatedAt:now-2*DAY,updatedAtStr:formatEventDateTime(now-2*DAY)},
+      {id:"RX_DEMO0002",patientUid:"demo_patient_2",createdByUid:auth.currentUser.uid,status:"active",issuedAt:now-1*DAY,issuedAtStr:formatEventDateTime(now-1*DAY),expiresAt:now+6*DAY,expiresAtStr:formatEventDateTime(now+6*DAY),medicines:{m1:med("Demo-Ciprofloxacin","500 mg","BID","7 days","14",now+6*DAY,true,false,true)},instructions:"",createdAt:now-1*DAY,createdAtStr:formatEventDateTime(now-1*DAY),updatedAt:now-1*DAY,updatedAtStr:formatEventDateTime(now-1*DAY)},
+      {id:"RX_DEMO0003",patientUid:"demo_patient_3",createdByUid:auth.currentUser.uid,status:"pending_dispense",issuedAt:now,issuedAtStr:formatEventDateTime(now),expiresAt:now+7*DAY,expiresAtStr:formatEventDateTime(now+7*DAY),medicines:{m1:med("Demo-Doxycycline","100 mg","BID","7 days","14",now+7*DAY,true,false,true)},instructions:"Avoid dairy.",createdAt:now,createdAtStr:formatEventDateTime(now),updatedAt:now,updatedAtStr:formatEventDateTime(now)}
     ];
     for(const rx of demoRx)await set(ref(db,dbPath(`prescriptions/${rx.id}`)),rx);
     const evId=newId("EVT");
-    await set(ref(db,dbPath(`dispensingEvents/RX_DEMO0002/_single_use`)),{createdAt:now,pharmacistUid:dp.uid});
-    await set(ref(db,dbPath(`dispensingEvents/RX_DEMO0002/${evId}`)),{id:evId,pharmacistUid:dp.uid,pharmacistName:dp.displayName,pharmacyName:dp.pharmacyName,pharmacyLocation:dp.pharmacyLocation,status:"demo_recorded",createdAt:now});
-    await update(ref(db,dbPath(`prescriptions/RX_DEMO0002`)),{dispensedByUid:dp.uid,dispensedAt:now,dispensedByName:dp.displayName,dispensedByPharmacy:dp.pharmacyName,dispensedByLocation:dp.pharmacyLocation});
+    await set(ref(db,dbPath(`dispensingEvents/RX_DEMO0002/_single_use`)),{createdAt:now,createdAtStr:formatEventDateTime(now),pharmacistUid:dp.uid});
+    await set(ref(db,dbPath(`dispensingEvents/RX_DEMO0002/${evId}`)),{id:evId,pharmacistUid:dp.uid,pharmacistName:dp.displayName,pharmacyName:dp.pharmacyName,pharmacyLocation:dp.pharmacyLocation,status:"demo_recorded",createdAt:now,createdAtStr:formatEventDateTime(now)});
+    await update(ref(db,dbPath(`prescriptions/RX_DEMO0002`)),{dispensedByUid:dp.uid,dispensedAt:now,dispensedAtStr:formatEventDateTime(now),dispensedByName:dp.displayName,dispensedByPharmacy:dp.pharmacyName,dispensedByLocation:dp.pharmacyLocation});
     await logAudit("seed_demo_data",null);toast(t("msg_seeded"),"ok",5000);goTo("admin","dash");
   }catch(e){toast("Seed failed: "+e.message,"err",6000)}
 }
