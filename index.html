@@ -128,6 +128,57 @@
   html[dir="rtl"] body{direction:rtl}
   html[dir="rtl"] input,html[dir="rtl"] textarea,html[dir="rtl"] select{text-align:right}
 
+
+  /* AMR GUARD professional light theme overrides */
+  :root{color-scheme:light;--panel:#ffffff;--panel2:#f7fafc;--line:#dbe4ee;--txt:#172b4d;--muted:#52647a;--brand:#16836b;--brand2:#2878c7;--danger:#b42318;--warn:#a15c00;--ok:#16794b;--radius:14px}
+  html,body{min-height:100%;height:auto;background:#f4f7fb;color:var(--txt)}
+  body{background:linear-gradient(180deg,#f8fbff 0%,#f1f6f9 100%);color:var(--txt)}
+  a{color:#1769aa}
+  input,select,textarea{background:#fff;color:#172b4d;border-color:#cbd5e1}
+  input:focus,select:focus,textarea:focus{border-color:#2878c7;box-shadow:0 0 0 3px rgba(40,120,199,.14)}
+  label{color:#475569}
+  .btn{background:linear-gradient(135deg,#18866d,#2878c7);color:#fff;box-shadow:0 2px 5px rgba(20,70,100,.08)}
+  .btn.ghost{background:#fff;border-color:#cbd5e1;color:#243b53}
+  .btn.danger{background:#b42318;color:#fff}
+  .chip{border-color:#cbd5e1;color:#475569;background:#f8fafc}
+  .chip.ok{border-color:#9bd6b4;color:#166534;background:#ecfdf3}
+  .chip.warn{border-color:#f3cf8b;color:#854d0e;background:#fff7e6}
+  .chip.danger{border-color:#f2b8b5;color:#9f1d16;background:#fff1f0}
+  .chip.info{border-color:#b6d6f5;color:#155e91;background:#eff8ff}
+  aside{background:#fff;border-right:1px solid #dbe4ee;box-shadow:3px 0 18px rgba(20,40,70,.035)}
+  .brand{border-color:#e2e8f0}.brand small{color:#64748b}
+  nav a{color:#52647a}nav a:hover{background:#f1f7fc;color:#17324d}
+  nav a.active{background:#eaf4ff;color:#164e7a;border-color:#b8d8f3}
+  .lang-picker button{background:#fff;color:#334155;border-color:#dbe4ee}
+  .lang-picker button.active{background:#eaf4ff;color:#155e91;border-color:#2878c7}
+  main{min-width:0}header.top{background:rgba(255,255,255,.86);border:1px solid #e2e8f0;border-radius:14px;padding:14px 16px;box-shadow:0 4px 18px rgba(15,40,70,.035)}
+  header.top p,.muted{color:#64748b}
+  .avatar{background:#e5eef8;color:#1d4f7a}
+  .card,.panel{background:#fff;border:1px solid #dbe4ee;box-shadow:0 4px 16px rgba(15,40,70,.045);color:#172b4d}
+  .card h3,.panel .sub{color:#64748b}
+  th{color:#52647a}td,th{border-bottom-color:#e5ebf2}tr:hover td{background:#f7fbff}
+  .notice,.info-box{border-color:#b6d6f5;background:#eff8ff;color:#164e7a}
+  .warning-box{border-color:#f1b7b2;background:#fff1f0;color:#9f1d16}
+  .success-box{border-color:#a7dfbd;background:#ecfdf3;color:#166534}
+  .ayur-box{border-color:#f2d18b;background:#fff8e7;color:#854d0e}
+  .field-msg.err{color:#b42318}.field-msg.ok{color:#16794b}.field-msg.info{color:#64748b}
+  .auth-card{background:#fff;border-color:#dbe4ee;box-shadow:0 18px 50px rgba(24,50,80,.12)}
+  .tabs{background:#f1f5f9;border-color:#dbe4ee}.tabs button{color:#52647a}.tabs button.active{background:#fff;color:#174a73;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+  .show-pass,.menu-btn{background:#fff;color:#243b53;border-color:#cbd5e1}
+  .med-row{background:#f8fafc;border-color:#dbe4ee}
+  .code{background:#f1f7fc;border-color:#dbe4ee;color:#155e91}
+  .toast{background:#fff;color:#172b4d;border-color:#dbe4ee;box-shadow:0 10px 30px rgba(20,40,70,.15)}
+  .demo-banner{background:#fff4d6;border:1px solid #e7bb52;color:#7c4a03;font-weight:800;letter-spacing:.02em}
+  .kiosk-banner{background:#eaf4ff;border-color:#2878c7;color:#155e91}
+  .demo-launch{width:100%;margin:0 0 14px;padding:13px 15px;border:1px solid #8dcab5;border-radius:12px;background:#ecfdf5;color:#166534;display:flex;justify-content:space-between;align-items:center;gap:10px;text-align:left;font-weight:700}
+  .demo-workspace{min-height:100vh;background:#f4f7fb;padding:clamp(12px,2.5vw,28px);color:#172b4d}
+  .demo-sticky{position:sticky;top:0;z-index:20;background:#fff;border:1px solid #cfe8db;border-radius:12px;padding:10px 14px;margin:0 auto 16px;max-width:1440px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;box-shadow:0 3px 14px rgba(20,70,50,.07)}
+  .demo-shell{max-width:1440px;margin:0 auto}.demo-head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:12px 0 18px}.demo-title{margin:0;font-size:clamp(1.45rem,3vw,2.1rem)}.demo-sub{color:#64748b;margin:6px 0 0;max-width:850px}
+  .demo-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:14px}.demo-card{grid-column:span 6;background:#fff;border:1px solid #dbe4ee;border-radius:14px;padding:16px;min-width:0;box-shadow:0 4px 14px rgba(15,40,70,.04)}.demo-card.full{grid-column:1/-1}.demo-card.third{grid-column:span 4}.demo-card h2{font-size:1.02rem;margin:0 0 10px}.demo-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.demo-kpi{padding:12px;border:1px solid #e1e8f0;border-radius:10px;background:#f8fbfe}.demo-kpi strong{font-size:1.4rem;display:block}.demo-kpi span{font-size:.78rem;color:#64748b}.demo-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.demo-scenario{display:block;width:100%;padding:11px 12px;text-align:left;border:1px solid #dbe4ee;border-radius:10px;background:#fff;color:#243b53;margin:7px 0}.demo-scenario[aria-pressed=true]{border-color:#2878c7;background:#eff8ff;box-shadow:0 0 0 2px rgba(40,120,199,.1)}.demo-scenario small{display:block;color:#64748b;margin-top:3px}.demo-result{margin-top:12px;border:1px solid #f3cf8b;background:#fff8e7;color:#754a00;border-radius:12px;padding:14px}.demo-result.critical{border-color:#f1b7b2;background:#fff1f0;color:#9f1d16}.demo-result.info{border-color:#b6d6f5;background:#eff8ff;color:#164e7a}.demo-result.safe{border-color:#a7dfbd;background:#ecfdf3;color:#166534}.demo-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.demo-form-grid label{margin-top:2px}.demo-table-wrap{overflow-x:auto}.demo-table{width:100%;border-collapse:collapse}.demo-table th,.demo-table td{padding:10px 8px;text-align:left;border-bottom:1px solid #e5ebf2;white-space:normal}.demo-chart{display:grid;gap:10px;margin-top:14px}.demo-chart-row{display:grid;grid-template-columns:minmax(100px,180px) 1fr 30px;align-items:center;gap:10px;font-size:.82rem}.demo-chart-track{height:12px;background:#edf2f7;border-radius:999px;overflow:hidden}.demo-chart-bar{height:100%;background:linear-gradient(90deg,#16836b,#2878c7);border-radius:999px}.demo-label{display:block;font-size:.78rem;font-weight:700;color:#52647a;margin-bottom:4px}.demo-pill{display:inline-block;padding:4px 8px;border-radius:999px;background:#eaf4ff;color:#155e91;font-size:.74rem;font-weight:700}.demo-danger{color:#b42318}.demo-muted{color:#64748b;font-size:.86rem}.demo-footer{font-size:.78rem;color:#64748b;margin:16px 0}.demo-lang{max-width:170px}.demo-workspace [dir=rtl],html[dir=rtl] .demo-workspace{text-align:right}.demo-workspace[dir=rtl] .demo-scenario{text-align:right}
+  @media(max-width:900px){.demo-card,.demo-card.third{grid-column:1/-1}.demo-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.demo-workspace{padding:10px}.demo-sticky{position:static}.demo-form-grid{grid-template-columns:1fr}}
+  @media(max-width:600px){header.top{padding:10px}.who{width:100%;justify-content:flex-start}.demo-actions .btn{flex:1 1 100%}.demo-card{padding:13px}.demo-kpis{gap:7px}.demo-kpi strong{font-size:1.2rem}.lang-picker button{min-height:36px}}
+  @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
 </style>
 </head>
 <body>
@@ -167,11 +218,9 @@
       <div><h1 style="margin:0" data-i18n="title">AMR GUARD</h1><p class="sub" style="margin:0" data-i18n="subtitle">Full demo — fictional data only</p></div>
     </div>
     <div class="notice" data-i18n="auth_notice">Educational prototype. No real prescribing, dispensing, or diagnosis. Do not enter real patient data.</div>
+    <button type="button" class="demo-launch" id="launchDemoBtn"><span>🧪 <span id="demoLaunchText">Explore full Demo Mode</span><small style="display:block;font-weight:400;margin-top:3px">Sample data only · Local simulation · No Firebase writes</small></span><span aria-hidden="true">→</span></button>
     <div class="lang-picker" style="margin-bottom:12px">
       <button data-lang="en" class="active">English</button><button data-lang="hi">हिन्दी</button><button data-lang="te">తెలుగు</button>
-      <button data-lang="ta">தமிழ்</button><button data-lang="kn">ಕನ್ನಡ</button><button data-lang="ml">മലയാളം</button>
-      <button data-lang="bn">বাংলা</button><button data-lang="mr">मराठी</button><button data-lang="gu">ગુજરાતી</button>
-      <button data-lang="pa">ਪੰਜਾਬੀ</button><button data-lang="or">ଓଡ଼ିଆ</button><button data-lang="as">অসমীয়া</button><button data-lang="ur">اردو</button>
     </div>
     <div class="tabs" role="tablist">
       <button id="tabSignIn" class="active" role="tab" data-i18n="signin">Sign in</button>
@@ -221,8 +270,6 @@
     <div class="brand"><div class="logo">AG</div><div><strong>AMR GUARD</strong><small data-i18n="brand_sub">+ ATM · full demo</small></div></div>
     <div class="lang-picker">
       <button data-lang="en" class="active">EN</button><button data-lang="hi">हिं</button><button data-lang="te">తె</button>
-      <button data-lang="ta">த</button><button data-lang="kn">ಕ</button><button data-lang="ml">മ</button><button data-lang="bn">বা</button>
-      <button data-lang="mr">म</button><button data-lang="gu">ગુ</button><button data-lang="pa">ਪੰ</button><button data-lang="or">ଓ</button><button data-lang="as">অ</button><button data-lang="ur">اردو</button>
     </div>
     <nav id="nav"></nav>
     <div class="side-foot">
@@ -244,6 +291,18 @@
     </header>
     <div id="views"></div>
   </main>
+</section>
+
+<section id="demoWorkspace" class="demo-workspace hidden" aria-label="AMR GUARD local demo workspace">
+  <div class="demo-sticky"><div><strong>🧪 <span id="demoPersistentLabel">DEMO MODE – SAMPLE DATA ONLY</span></strong><div class="demo-muted" id="demoLocalNotice">All changes are temporary and kept in memory on this device. No sample records are sent to Firebase.</div></div><div class="demo-actions" style="margin-top:0"><select id="demoLang" class="demo-lang" aria-label="Demo language"><option value="en">English</option><option value="hi">हिन्दी</option><option value="te">తెలుగు</option></select><button class="btn ghost small" id="resetDemoBtn" type="button">Reset Demo</button><button class="btn ghost small" id="exitDemoBtn" type="button">Exit Demo</button></div></div>
+  <div class="demo-shell"><div class="demo-head"><div><h1 class="demo-title" id="demoHeading">AMR GUARD · Interactive safety lab</h1><p class="demo-sub" id="demoIntro">Explore account flows, medicine search, safety alerts, opened-medicine expiry tracking, dashboards and resistance education using fictional examples only.</p></div><span class="demo-pill" id="demoUserPill">Guest demo</span></div>
+    <div class="demo-grid">
+      <section class="demo-card full"><h2 id="demoDashTitle">Demo dashboard</h2><div class="demo-kpis"><div class="demo-kpi"><strong id="demoKpiUsers">3</strong><span id="demoKpiUsersLabel">Sample accounts</span></div><div class="demo-kpi"><strong id="demoKpiAlerts">4</strong><span id="demoKpiAlertsLabel">Safety scenarios</span></div><div class="demo-kpi"><strong id="demoKpiExpiry">2</strong><span id="demoKpiExpiryLabel">Expiry examples</span></div><div class="demo-kpi"><strong id="demoKpiAmr">1</strong><span id="demoKpiAmrLabel">AMR education alert</span></div></div><div class="demo-actions"><button class="btn" type="button" data-demo-view="accounts" id="demoAccountsBtn">Account & profile demo</button><button class="btn" type="button" data-demo-view="medicine" id="demoMedicineBtn">Medicine search</button><button class="btn" type="button" data-demo-view="safety" id="demoSafetyBtn">Safety scenarios</button><button class="btn" type="button" data-demo-view="expiry" id="demoExpiryBtn">Expiry tracker</button><button class="btn" type="button" data-demo-view="reports" id="demoReportsBtn">Reports & alerts</button></div></section>
+      <section class="demo-card" id="demoMainPanel"><h2 id="demoPanelTitle">Medicine safety scenarios</h2><p class="demo-muted" id="demoPanelHint">Select a sample scenario. Outcomes are educational demonstrations, not clinical determinations.</p><div id="demoPanelBody"></div></section>
+      <section class="demo-card"><h2 id="demoSearchTitle">Medicine information search</h2><label class="demo-label" for="demoMedicineSearch" id="demoSearchLabel">Search a medicine or topic</label><input id="demoMedicineSearch" type="search" placeholder="e.g. paracetamol, amoxicillin, AMR" /><div class="demo-actions"><button class="btn" type="button" id="demoSearchBtn">Search catalogue</button><button class="btn ghost" type="button" id="demoClearSearchBtn">Clear</button></div><div id="demoSearchResults" aria-live="polite" style="margin-top:12px"></div></section>
+      <section class="demo-card full"><h2 id="demoReportsTitle">Sample reports & notifications</h2><div id="demoReportsBody"></div></section>
+    </div><p class="demo-footer" id="demoTranslationAudit" aria-live="polite">Translation coverage check will appear here.</p><p class="demo-footer" id="demoMedicalFooter">Clinical safety: this demo does not diagnose, prescribe, or certify a dose as safe. For a suspected overdose, seek urgent professional or poison-control advice; do not wait for this app and do not induce vomiting. Translations of clinical safety text require qualified medical review.</p>
+  </div>
 </section>
 
 <script type="module">
@@ -270,7 +329,7 @@ const $ = (s, r=document) => r.querySelector(s);
 const $$ = (s, r=document) => [...r.querySelectorAll(s)];
 const dbPath = s => s ? `${ROOT}/${s}` : ROOT;
 
-const state = { user:null, profile:null, lang: localStorage.getItem("ab_lang") || "en", kiosk: localStorage.getItem("ab_kiosk")==="1" };
+const state = { user:null, profile:null, lang: ["en","hi","te"].includes(localStorage.getItem("ab_lang")) ? localStorage.getItem("ab_lang") : "en", kiosk: localStorage.getItem("ab_kiosk")==="1" };
 
 /* ================= Medicine Catalogue ================= */
 const CATALOGUE = {
@@ -324,9 +383,9 @@ const DAILY_DOSE_LIMITS = {
 };
 
 function getDoseLimit(medName){
-  const key = String(medName||"").toLowerCase().replace(/^demo-/, "").split(/[^a-z]/)[0];
-  for (const [k,v] of Object.entries(DAILY_DOSE_LIMITS)) if (key.includes(k)) return v;
-  return 2;
+  // Deliberately disabled: legacy frequency counts are not a clinically validated
+  // dose-limit source. Never infer a safe limit from medicine name alone.
+  return null;
 }
 
 /* ================= i18n ================= */
@@ -408,7 +467,7 @@ const I18N = {
     pharmacy:"Pharmacy", actions:"", patient_unique_id:"Unique ID",
     dose:"Dosage", freq:"Frequency", duration:"Duration", qty:"Qty", name:"Name", notes:"Notes",
     morning:"Morning", afternoon:"Afternoon", evening:"Evening",
-    today_header:"Today", nothing_scheduled:"Nothing scheduled.",
+    today_header:"Today", nothing_scheduled:"Nothing scheduled.", notify_enable:"Enable browser notifications", notify_status:"Notifications are checked while AMR GUARD is open. Background delivery depends on browser support.", notify_denied:"Notifications are blocked. In-app reminders remain available while the app is open.", expiry_alerts:"Medicine expiry alerts", expiry_expired:"Expired — do not use; check with a pharmacist.", expiry_soon:"Near expiry — check the printed package date.", no_expiry_alerts:"No upcoming expiry alerts found.",
     export_ics:"Download .ics", export_csv:"⤓ CSV", export_log:"⤓ Export CSV",
     add_med:"+ Add medicine", remove:"Remove", save:"Save",
     language:"Language", voice:"Voice", speak:"🎤 Speak",
@@ -439,11 +498,13 @@ const I18N = {
     not_dispensed:"Not dispensed",
     notice_dispense_only:"Demo dispensing only. No real medication is dispensed.",
     rem_title:"Dosage tracking & safety suggestions",
-    rem_sub:"Mark doses as taken. If you exceed the recommended daily limit, we show who to contact and gentle Ayurvedic support suggestions (demo only).",
+    rem_sub:"Mark doses as taken. This checklist records entries; it does not independently verify a safe dose.",
+    rem_rule_not_configured:"Dose-limit verification is not clinically configured for your exact product and prescription. This checklist cannot determine whether a dose is safe. Follow the product label/prescriber; if too much may have been taken, seek urgent medical or poison-control advice.",
+    rem_status_unknown:"Not verified",
     rem_taken_today:"Taken today",
-    rem_limit:"Daily limit",
+    rem_limit:"Validated limit",
     rem_status:"Status",
-    rem_ok:"On track",
+    rem_ok:"On track (not a safety confirmation)",
     rem_near:"Near limit",
     rem_over:"Above limit",
     rem_log_dose:"Log dose",
@@ -585,7 +646,7 @@ const I18N = {
     pharmacy:"फार्मेसी", actions:"", patient_unique_id:"अद्वितीय आईडी",
     dose:"खुराक", freq:"आवृत्ति", duration:"अवधि", qty:"मात्रा", name:"नाम", notes:"टिप्पणियाँ",
     morning:"सुबह", afternoon:"दोपहर", evening:"शाम",
-    today_header:"आज", nothing_scheduled:"कुछ निर्धारित नहीं।",
+    today_header:"आज", nothing_scheduled:"कुछ निर्धारित नहीं।", notify_enable:"ब्राउज़र सूचनाएँ चालू करें", notify_status:"सूचनाएँ तभी जाँची जाती हैं जब AMR GUARD खुला हो। बैकग्राउंड सूचना ब्राउज़र पर निर्भर है।", notify_denied:"सूचनाएँ बंद हैं। ऐप खुला रहने पर इन-ऐप रिमाइंडर उपलब्ध रहेंगे।", expiry_alerts:"दवा की समाप्ति चेतावनियाँ", expiry_expired:"समाप्त — उपयोग न करें; फार्मासिस्ट से पूछें।", expiry_soon:"समाप्ति निकट है — पैकेट पर तारीख जाँचें।", no_expiry_alerts:"समाप्ति की कोई निकट चेतावनी नहीं मिली।",
     export_ics:".ics डाउनलोड करें", export_csv:"⤓ CSV", export_log:"⤓ CSV निर्यात",
     add_med:"+ दवा जोड़ें", remove:"हटाएँ", save:"सहेजें",
     language:"भाषा", voice:"आवाज़", speak:"🎤 बोलें",
@@ -762,7 +823,7 @@ const I18N = {
     pharmacy:"ఫార్మసీ", actions:"", patient_unique_id:"ప్రత్యేక ID",
     dose:"మోతాదు", freq:"తరచుదనం", duration:"వ్యవధి", qty:"పరిమాణం", name:"పేరు", notes:"గమనికలు",
     morning:"ఉదయం", afternoon:"మధ్యాహ్నం", evening:"సాయంత్రం",
-    today_header:"నేడు", nothing_scheduled:"ఏమీ షెడ్యూల్ చేయబడలేదు.",
+    today_header:"ఈ రోజు", nothing_scheduled:"ఏమీ షెడ్యూల్ చేయబడలేదు.", notify_enable:"బ్రౌజర్ నోటిఫికేషన్‌లను ప్రారంభించండి", notify_status:"AMR GUARD తెరిచి ఉన్నప్పుడు మాత్రమే నోటిఫికేషన్‌లను తనిఖీ చేస్తుంది. బ్యాక్‌గ్రౌండ్ నోటిఫికేషన్ బ్రౌజర్‌పై ఆధారపడి ఉంటుంది.", notify_denied:"నోటిఫికేషన్‌లు అనుమతించబడలేదు. యాప్ తెరిచి ఉన్నప్పుడు యాప్‌లో రిమైండర్‌లు అందుబాటులో ఉంటాయి.", expiry_alerts:"మందుల గడువు హెచ్చరికలు", expiry_expired:"గడువు ముగిసింది — వాడకండి; ఫార్మసిస్ట్‌ను సంప్రదించండి.", expiry_soon:"గడువు దగ్గరలో ఉంది — ప్యాకెట్‌పై తేదీని తనిఖీ చేయండి.", no_expiry_alerts:"త్వరలో గడువు ముగిసే మందులు కనబడలేదు.",
     export_ics:".ics డౌన్‌లోడ్", export_csv:"⤓ CSV", export_log:"⤓ CSV ఎగుమతి",
     add_med:"+ మందు జోడించండి", remove:"తీసివేయండి", save:"సేవ్",
     language:"భాష", voice:"వాయిస్", speak:"🎤 మాట్లాడండి",
@@ -877,11 +938,27 @@ const I18N = {
 
 const OPENED_I18N = {"en":{"nav_opened":"Opened medicine expiry","page_opened":"Opened medicine expiry","page_opened_sub":"Track bottle opening and discard dates","opened_title":"Opened medicine tracker","opened_sub":"For syrups and other medicines with a limited use period after opening.","opened_name":"Medicine / syrup name","opened_opened":"Date opened","opened_labeldate":"Use-by date after opening (from label or pharmacist)","opened_expiry":"Printed expiry date on pack","opened_add":"Add to tracker","opened_note":"Important: Do not guess how many days a syrup lasts after opening. Enter the discard/use-by date stated in the product leaflet/label or confirmed by a pharmacist. If you cannot confirm it, ask a pharmacist before using it. Follow the earliest of the after-opening date and printed expiry date.","opened_empty":"No opened medicines added yet.","opened_status_ok":"Within recorded dates","opened_status_soon":"Use-by date is today or within 3 days","opened_status_expired":"Do not use: recorded date has passed","opened_status_missing":"Date information incomplete — confirm with a pharmacist","opened_delete":"Remove","opened_saved":"Saved opened-medicine details.","opened_need":"Enter the medicine name, date opened, after-opening use-by date, and printed expiry date.","opened_row_opened":"Opened","opened_row_useby":"After-opening use-by","opened_row_pack":"Pack expiry","opened_row_final":"Effective discard date","opened_reminder":"Check the bottle label/leaflet every time. This tracker is a reminder tool, not a substitute for the manufacturer instructions or pharmacist advice."},"hi":{"nav_opened":"खोलने के बाद दवा की अवधि","page_opened":"खोलने के बाद दवा की अवधि","page_opened_sub":"बोतल खोलने और उपयोग की अंतिम तारीख देखें","opened_title":"खोली गई दवाओं का ट्रैकर","opened_sub":"सिरप और खोलने के बाद सीमित समय तक उपयोग वाली दवाओं के लिए।","opened_name":"दवा / सिरप का नाम","opened_opened":"खोलने की तारीख","opened_labeldate":"खोलने के बाद उपयोग की अंतिम तारीख (लेबल/फार्मासिस्ट के अनुसार)","opened_expiry":"पैक पर छपी समाप्ति तिथि","opened_add":"ट्रैकर में जोड़ें","opened_note":"महत्वपूर्ण: सिरप खोलने के बाद कितने दिन तक ठीक रहता है, इसका अनुमान न लगाएँ। पैक के निर्देश/लेबल में दी गई तारीख लिखें या फार्मासिस्ट से पुष्टि करें। तारीख स्पष्ट न हो तो उपयोग से पहले फार्मासिस्ट से पूछें। दोनों तारीखों में जो पहले हो, वही मानें।","opened_empty":"अभी कोई खोली गई दवा नहीं जोड़ी गई है।","opened_status_ok":"दर्ज तारीखों के भीतर","opened_status_soon":"अंतिम तारीख आज है या अगले 3 दिनों में है","opened_status_expired":"उपयोग न करें: दर्ज तारीख बीत चुकी है","opened_status_missing":"तारीख अधूरी है — फार्मासिस्ट से पुष्टि करें","opened_delete":"हटाएँ","opened_saved":"खोली गई दवा की जानकारी सहेजी गई।","opened_need":"दवा का नाम, खोलने की तारीख, खोलने के बाद की अंतिम तारीख और पैक की समाप्ति तिथि भरें।","opened_row_opened":"खोला गया","opened_row_useby":"खोलने के बाद अंतिम तारीख","opened_row_pack":"पैक की समाप्ति","opened_row_final":"अंतिम उपयोग/फेंकने की तारीख","opened_reminder":"हर बार बोतल का लेबल/निर्देश देखें। यह ट्रैकर केवल याद दिलाने के लिए है; निर्माता के निर्देश या फार्मासिस्ट की सलाह का विकल्प नहीं है।"},"te":{"nav_opened":"తెరిచిన మందుల గడువు","page_opened":"తెరిచిన మందుల గడువు","page_opened_sub":"బాటిల్ తెరిచిన తేదీ, వాడకూడని తేదీ నమోదు","opened_title":"తెరిచిన మందుల ట్రాకర్","opened_sub":"సిరప్‌లు మరియు తెరిచిన తర్వాత పరిమిత కాలం మాత్రమే వాడాల్సిన మందుల కోసం.","opened_name":"మందు / సిరప్ పేరు","opened_opened":"తెరిచిన తేదీ","opened_labeldate":"తెరిచిన తర్వాత వాడకూడని తేదీ (లేబుల్ లేదా ఫార్మసిస్ట్ సూచన ప్రకారం)","opened_expiry":"ప్యాక్‌పై ముద్రించిన గడువు తేదీ","opened_add":"ట్రాకర్‌లో చేర్చండి","opened_note":"ముఖ్యం: సిరప్ తెరిచిన తర్వాత ఎన్ని రోజులు వాడవచ్చో ఊహించవద్దు. ఉత్పత్తి లీఫ్‌లెట్/లేబుల్‌లో ఉన్న తేదీని నమోదు చేయండి లేదా ఫార్మసిస్ట్‌తో నిర్ధారించండి. తేదీ తెలియకపోతే వాడే ముందు ఫార్మసిస్ట్‌ను అడగండి. తెరిచిన తర్వాతి తేదీ, ప్యాక్ గడువు తేదీలలో ముందుగా వచ్చేదే చివరి తేదీ.","opened_empty":"ఇప్పటివరకు తెరిచిన మందులు ఏవీ చేర్చలేదు.","opened_status_ok":"నమోదు చేసిన తేదీలలోపు ఉంది","opened_status_soon":"వాడకూడని తేదీ ఈరోజు లేదా వచ్చే 3 రోజుల్లో ఉంది","opened_status_expired":"వాడవద్దు: నమోదు చేసిన తేదీ దాటిపోయింది","opened_status_missing":"తేదీ వివరాలు పూర్తిగా లేవు — ఫార్మసిస్ట్‌తో నిర్ధారించండి","opened_delete":"తొలగించండి","opened_saved":"తెరిచిన మందు వివరాలు సేవ్ అయ్యాయి.","opened_need":"మందు పేరు, తెరిచిన తేదీ, తెరిచిన తర్వాత వాడకూడని తేదీ, ప్యాక్ గడువు తేదీ నమోదు చేయండి.","opened_row_opened":"తెరిచినది","opened_row_useby":"తెరిచిన తర్వాత చివరి తేదీ","opened_row_pack":"ప్యాక్ గడువు","opened_row_final":"చివరి వాడకం/విసర్జన తేదీ","opened_reminder":"ప్రతి సారి బాటిల్ లేబుల్/లీఫ్‌లెట్ చూడండి. ఈ ట్రాకర్ గుర్తు చేసే సాధనం మాత్రమే; తయారీదారు సూచనలు లేదా ఫార్మసిస్ట్ సలహాకు ప్రత్యామ్నాయం కాదు."},"ta":{"nav_opened":"திறந்த மருந்தின் காலாவதி","page_opened":"திறந்த மருந்தின் காலாவதி","page_opened_sub":"திறந்த தேதி மற்றும் பயன்படுத்த வேண்டிய கடைசி தேதியைப் பதிவு செய்யவும்","opened_title":"திறந்த மருந்து கண்காணிப்பு","opened_sub":"சிரப் மற்றும் திறந்த பின் குறுகிய காலமே பயன்படுத்த வேண்டிய மருந்துகளுக்கு.","opened_name":"மருந்து / சிரப் பெயர்","opened_opened":"திறந்த தேதி","opened_labeldate":"திறந்த பின் பயன்படுத்த வேண்டிய கடைசி தேதி (லேபிள்/மருந்தாளரின் அறிவுறுத்தல்)","opened_expiry":"பேக்கில் அச்சிடப்பட்ட காலாவதி தேதி","opened_add":"சேர்க்கவும்","opened_note":"முக்கியம்: சிரப்பைத் திறந்த பின் எத்தனை நாட்கள் பயன்படுத்தலாம் என்று ஊகிக்க வேண்டாம். லேபிள்/துண்டுப் பிரசுரத்தில் உள்ள தேதியைப் பதிவு செய்யவும் அல்லது மருந்தாளரிடம் உறுதிப்படுத்தவும். தெரியாவிட்டால் பயன்படுத்தும் முன் கேளுங்கள். இரண்டு தேதிகளில் முந்தையதே இறுதி தேதி.","opened_empty":"திறந்த மருந்துகள் இன்னும் சேர்க்கப்படவில்லை.","opened_status_ok":"பதிவுசெய்த தேதிகளுக்குள் உள்ளது","opened_status_soon":"கடைசி தேதி இன்று அல்லது அடுத்த 3 நாட்களில்","opened_status_expired":"பயன்படுத்த வேண்டாம்: தேதி கடந்துவிட்டது","opened_status_missing":"தேதி விவரம் முழுமையில்லை — மருந்தாளரிடம் உறுதிப்படுத்தவும்","opened_delete":"நீக்கு","opened_saved":"விவரங்கள் சேமிக்கப்பட்டன.","opened_need":"மருந்துப் பெயர், திறந்த தேதி, திறந்த பின் கடைசி தேதி, பேக் காலாவதி தேதி ஆகியவற்றை உள்ளிடவும்.","opened_row_opened":"திறந்தது","opened_row_useby":"திறந்த பின் கடைசி தேதி","opened_row_pack":"பேக் காலாவதி","opened_row_final":"இறுதி தேதி","opened_reminder":"ஒவ்வொரு முறையும் லேபிளைப் பார்க்கவும். இது நினைவூட்டல் மட்டுமே; தயாரிப்பாளர் வழிமுறைகள் அல்லது மருந்தாளர் ஆலோசனைக்கு மாற்றாகாது."},"kn":{"nav_opened":"ತೆರೆದ ಔಷಧಿಯ ಅವಧಿ","page_opened":"ತೆರೆದ ಔಷಧಿಯ ಅವಧಿ","page_opened_sub":"ತೆರೆದ ದಿನಾಂಕ ಮತ್ತು ಕೊನೆಯ ಬಳಕೆ ದಿನಾಂಕ ದಾಖಲಿಸಿ","opened_title":"ತೆರೆದ ಔಷಧಿ ಟ್ರ್ಯಾಕರ್","opened_sub":"ಸಿರಪ್ ಮತ್ತು ತೆರೆದ ನಂತರ ಸೀಮಿತ ಅವಧಿಗೆ ಮಾತ್ರ ಬಳಸುವ ಔಷಧಿಗಳಿಗೆ.","opened_name":"ಔಷಧಿ / ಸಿರಪ್ ಹೆಸರು","opened_opened":"ತೆರೆದ ದಿನಾಂಕ","opened_labeldate":"ತೆರೆದ ನಂತರ ಬಳಕೆಯ ಕೊನೆಯ ದಿನಾಂಕ (ಲೇಬಲ್/ಔಷಧಿಕಾರರ ಸೂಚನೆಯಂತೆ)","opened_expiry":"ಪ್ಯಾಕ್‌ನಲ್ಲಿರುವ ಅವಧಿ ಮುಗಿಯುವ ದಿನಾಂಕ","opened_add":"ಸೇರಿಸಿ","opened_note":"ಮುಖ್ಯ: ತೆರೆದ ನಂತರ ಸಿರಪ್ ಎಷ್ಟು ದಿನ ಬಳಸಬಹುದು ಎಂದು ಊಹಿಸಬೇಡಿ. ಲೇಬಲ್/ಕರಪತ್ರದಲ್ಲಿರುವ ದಿನಾಂಕವನ್ನು ದಾಖಲಿಸಿ ಅಥವಾ ಔಷಧಿಕಾರರಿಂದ ದೃಢಪಡಿಸಿ. ತಿಳಿಯದಿದ್ದರೆ ಬಳಸುವ ಮೊದಲು ಕೇಳಿ. ಎರಡರಲ್ಲಿ ಮೊದಲಿನ ದಿನಾಂಕವೇ ಕೊನೆಯ ದಿನಾಂಕ.","opened_empty":"ಇನ್ನೂ ಯಾವುದೇ ತೆರೆದ ಔಷಧಿ ಸೇರಿಸಿಲ್ಲ.","opened_status_ok":"ದಾಖಲಿಸಿದ ದಿನಾಂಕಗಳೊಳಗೆ ಇದೆ","opened_status_soon":"ಕೊನೆಯ ದಿನಾಂಕ ಇಂದು ಅಥವಾ ಮುಂದಿನ 3 ದಿನಗಳಲ್ಲಿ","opened_status_expired":"ಬಳಸಬೇಡಿ: ದಿನಾಂಕ ಕಳೆದಿದೆ","opened_status_missing":"ದಿನಾಂಕ ಮಾಹಿತಿ ಅಪೂರ್ಣ — ಔಷಧಿಕಾರರನ್ನು ಕೇಳಿ","opened_delete":"ತೆಗೆದುಹಾಕಿ","opened_saved":"ವಿವರಗಳನ್ನು ಉಳಿಸಲಾಗಿದೆ.","opened_need":"ಔಷಧಿಯ ಹೆಸರು, ತೆರೆದ ದಿನಾಂಕ, ತೆರೆದ ನಂತರದ ಕೊನೆಯ ದಿನಾಂಕ ಮತ್ತು ಪ್ಯಾಕ್ ಅವಧಿ ದಿನಾಂಕ ನಮೂದಿಸಿ.","opened_row_opened":"ತೆರೆದ ದಿನ","opened_row_useby":"ತೆರೆದ ನಂತರದ ಕೊನೆಯ ದಿನ","opened_row_pack":"ಪ್ಯಾಕ್ ಅವಧಿ","opened_row_final":"ಅಂತಿಮ ದಿನಾಂಕ","opened_reminder":"ಪ್ರತಿ ಬಾರಿ ಲೇಬಲ್ ನೋಡಿ. ಇದು ನೆನಪಿಸುವ ಸಾಧನ ಮಾತ್ರ; ತಯಾರಕರ ಸೂಚನೆ ಅಥವಾ ಔಷಧಿಕಾರರ ಸಲಹೆಗೆ ಬದಲಿಯಲ್ಲ."},"ml":{"nav_opened":"തുറന്ന മരുന്നിന്റെ കാലാവധി","page_opened":"തുറന്ന മരുന്നിന്റെ കാലാവധി","page_opened_sub":"തുറന്ന തീയതിയും ഉപയോഗിക്കേണ്ട അവസാന തീയതിയും രേഖപ്പെടുത്തുക","opened_title":"തുറന്ന മരുന്നുകളുടെ ട്രാക്കർ","opened_sub":"സിറപ്പുകൾക്കും തുറന്ന ശേഷം പരിമിതകാലം മാത്രം ഉപയോഗിക്കേണ്ട മരുന്നുകൾക്കും.","opened_name":"മരുന്ന് / സിറപ്പ് പേര്","opened_opened":"തുറന്ന തീയതി","opened_labeldate":"തുറന്ന ശേഷം ഉപയോഗിക്കേണ്ട അവസാന തീയതി (ലേബൽ/ഫാർമസിസ്റ്റ് നിർദേശം)","opened_expiry":"പാക്കറ്റിലെ കാലാവധി തീയതി","opened_add":"ചേർക്കുക","opened_note":"പ്രധാനം: തുറന്ന ശേഷം സിറപ്പ് എത്ര ദിവസം ഉപയോഗിക്കാമെന്ന് ഊഹിക്കരുത്. ലേബലിലോ ലഘുലേഖയിലോ നൽകിയ തീയതി രേഖപ്പെടുത്തുക അല്ലെങ്കിൽ ഫാർമസിസ്റ്റിനോട് സ്ഥിരീകരിക്കുക. അറിയില്ലെങ്കിൽ ഉപയോഗിക്കുന്നതിന് മുമ്പ് ചോദിക്കുക. രണ്ട് തീയതികളിൽ ആദ്യം വരുന്ന തീയതി പാലിക്കുക.","opened_empty":"തുറന്ന മരുന്നുകളൊന്നും ചേർത്തിട്ടില്ല.","opened_status_ok":"രേഖപ്പെടുത്തിയ തീയതിക്കുള്ളിലാണ്","opened_status_soon":"അവസാന തീയതി ഇന്നോ അടുത്ത 3 ദിവസത്തിനുള്ളിലോ ആണ്","opened_status_expired":"ഉപയോഗിക്കരുത്: തീയതി കഴിഞ്ഞു","opened_status_missing":"തീയതി വിവരം അപൂർണ്ണമാണ് — ഫാർമസിസ്റ്റിനോട് ചോദിക്കുക","opened_delete":"നീക്കം ചെയ്യുക","opened_saved":"വിവരങ്ങൾ സേവ് ചെയ്തു.","opened_need":"മരുന്നിന്റെ പേര്, തുറന്ന തീയതി, തുറന്ന ശേഷമുള്ള അവസാന തീയതി, പാക്കറ്റിലെ കാലാവധി തീയതി എന്നിവ നൽകുക.","opened_row_opened":"തുറന്നത്","opened_row_useby":"തുറന്ന ശേഷമുള്ള അവസാന തീയതി","opened_row_pack":"പാക്കറ്റ് കാലാവധി","opened_row_final":"അവസാന തീയതി","opened_reminder":"ഓരോ തവണയും ലേബൽ പരിശോധിക്കുക. ഇത് ഓർമ്മപ്പെടുത്തൽ മാത്രമാണ്; നിർമ്മാതാവിന്റെ നിർദേശത്തിനോ ഫാർമസിസ്റ്റിന്റെ ഉപദേശത്തിനോ പകരമല്ല."},"bn":{"nav_opened":"খোলার পর ওষুধের মেয়াদ","page_opened":"খোলার পর ওষুধের মেয়াদ","page_opened_sub":"বোতল খোলার ও ব্যবহারের শেষ তারিখ লিখুন","opened_title":"খোলা ওষুধের ট্র্যাকার","opened_sub":"সিরাপ এবং খোলার পর সীমিত সময় ব্যবহারযোগ্য ওষুধের জন্য।","opened_name":"ওষুধ / সিরাপের নাম","opened_opened":"খোলার তারিখ","opened_labeldate":"খোলার পর ব্যবহারের শেষ তারিখ (লেবেল/ফার্মাসিস্ট অনুযায়ী)","opened_expiry":"প্যাকেটে ছাপানো মেয়াদ শেষের তারিখ","opened_add":"যোগ করুন","opened_note":"গুরুত্বপূর্ণ: সিরাপ খোলার পর কত দিন ব্যবহার করা যাবে তা অনুমান করবেন না। লেবেল/লিফলেটের তারিখ লিখুন বা ফার্মাসিস্টের কাছে নিশ্চিত করুন। জানা না থাকলে ব্যবহারের আগে জিজ্ঞাসা করুন। দুই তারিখের মধ্যে আগের তারিখটি মানুন।","opened_empty":"এখনও কোনো খোলা ওষুধ যোগ করা হয়নি।","opened_status_ok":"নথিভুক্ত তারিখের মধ্যে আছে","opened_status_soon":"শেষ তারিখ আজ বা আগামী ৩ দিনের মধ্যে","opened_status_expired":"ব্যবহার করবেন না: তারিখ পেরিয়ে গেছে","opened_status_missing":"তারিখের তথ্য অসম্পূর্ণ — ফার্মাসিস্টের কাছে নিশ্চিত করুন","opened_delete":"সরান","opened_saved":"তথ্য সংরক্ষিত হয়েছে।","opened_need":"ওষুধের নাম, খোলার তারিখ, খোলার পর শেষ তারিখ এবং প্যাকেটের মেয়াদ দিন।","opened_row_opened":"খোলা হয়েছে","opened_row_useby":"খোলার পর শেষ তারিখ","opened_row_pack":"প্যাকেটের মেয়াদ","opened_row_final":"চূড়ান্ত তারিখ","opened_reminder":"প্রতিবার বোতলের লেবেল দেখুন। এটি শুধু মনে করিয়ে দেয়; প্রস্তুতকারকের নির্দেশ বা ফার্মাসিস্টের পরামর্শের বিকল্প নয়।"},"mr":{"nav_opened":"उघडलेल्या औषधाची मुदत","page_opened":"उघडलेल्या औषधाची मुदत","page_opened_sub":"उघडण्याची आणि शेवटची वापर तारीख नोंदवा","opened_title":"उघडलेल्या औषधांचा ट्रॅकर","opened_sub":"सिरप आणि उघडल्यानंतर मर्यादित काळ वापरायच्या औषधांसाठी.","opened_name":"औषध / सिरपचे नाव","opened_opened":"उघडल्याची तारीख","opened_labeldate":"उघडल्यानंतर वापरण्याची अंतिम तारीख (लेबल/फार्मासिस्टनुसार)","opened_expiry":"पॅकवरील मुदत संपण्याची तारीख","opened_add":"जोडा","opened_note":"महत्त्वाचे: सिरप उघडल्यानंतर किती दिवस वापरता येईल याचा अंदाज लावू नका. लेबल/पत्रकावरील तारीख नोंदवा किंवा फार्मासिस्टकडून खात्री करा. माहिती नसेल तर वापरण्यापूर्वी विचारा. दोन्ही तारखांपैकी आधीची तारीख पाळा.","opened_empty":"अजून उघडलेली औषधे जोडलेली नाहीत.","opened_status_ok":"नोंदवलेल्या तारखांमध्ये आहे","opened_status_soon":"अंतिम तारीख आज किंवा पुढील 3 दिवसांत आहे","opened_status_expired":"वापरू नका: तारीख उलटली आहे","opened_status_missing":"तारीख अपूर्ण — फार्मासिस्टकडून खात्री करा","opened_delete":"काढा","opened_saved":"माहिती जतन झाली.","opened_need":"औषधाचे नाव, उघडल्याची तारीख, उघडल्यानंतरची अंतिम तारीख आणि पॅकची मुदत तारीख भरा.","opened_row_opened":"उघडले","opened_row_useby":"उघडल्यानंतर अंतिम तारीख","opened_row_pack":"पॅकची मुदत","opened_row_final":"अंतिम तारीख","opened_reminder":"प्रत्येक वेळी लेबल तपासा. हा फक्त स्मरणपत्र आहे; उत्पादकाच्या सूचनांचा किंवा फार्मासिस्टच्या सल्ल्याचा पर्याय नाही."},"gu":{"nav_opened":"ખોલેલી દવાની સમયમર્યાદા","page_opened":"ખોલેલી દવાની સમયમર્યાદા","page_opened_sub":"ખોલ્યાની અને છેલ્લી ઉપયોગ તારીખ નોંધો","opened_title":"ખોલેલી દવાઓ ટ્રેકર","opened_sub":"સિરપ અને ખોલ્યા પછી મર્યાદિત સમય સુધી વાપરવાની દવાઓ માટે.","opened_name":"દવા / સિરપનું નામ","opened_opened":"ખોલ્યાની તારીખ","opened_labeldate":"ખોલ્યા પછી વાપરવાની છેલ્લી તારીખ (લેબલ/ફાર્માસિસ્ટ મુજબ)","opened_expiry":"પેક પર છાપેલી સમાપ્તિ તારીખ","opened_add":"ઉમેરો","opened_note":"મહત્વપૂર્ણ: સિરપ ખોલ્યા પછી કેટલા દિવસ વાપરી શકાય તેનો અંદાજ ન લગાવો. લેબલ/પત્રકની તારીખ લખો અથવા ફાર્માસિસ્ટથી ખાતરી કરો. ખબર ન હોય તો વાપરતા પહેલાં પૂછો. બે તારીખોમાં જે પહેલાં આવે તે માન્ય રાખો.","opened_empty":"હજુ કોઈ ખોલેલી દવા ઉમેરાઈ નથી.","opened_status_ok":"નોંધેલી તારીખોની અંદર છે","opened_status_soon":"છેલ્લી તારીખ આજે અથવા આગામી 3 દિવસમાં છે","opened_status_expired":"વાપરશો નહીં: તારીખ પસાર થઈ ગઈ છે","opened_status_missing":"તારીખ અધૂરી છે — ફાર્માસિસ્ટથી ખાતરી કરો","opened_delete":"દૂર કરો","opened_saved":"વિગતો સાચવાઈ ગઈ.","opened_need":"દવાનું નામ, ખોલ્યાની તારીખ, ખોલ્યા પછીની છેલ્લી તારીખ અને પેકની સમાપ્તિ તારીખ દાખલ કરો.","opened_row_opened":"ખોલ્યું","opened_row_useby":"ખોલ્યા પછી છેલ્લી તારીખ","opened_row_pack":"પેક સમાપ્તિ","opened_row_final":"અંતિમ તારીખ","opened_reminder":"દરેક વખતે લેબલ તપાસો. આ માત્ર યાદ અપાવે છે; ઉત્પાદકની સૂચના અથવા ફાર્માસિસ્ટની સલાહનો વિકલ્પ નથી."},"pa":{"nav_opened":"ਖੁੱਲ੍ਹੀ ਦਵਾਈ ਦੀ ਮਿਆਦ","page_opened":"ਖੁੱਲ੍ਹੀ ਦਵਾਈ ਦੀ ਮਿਆਦ","page_opened_sub":"ਖੋਲ੍ਹਣ ਅਤੇ ਆਖਰੀ ਵਰਤੋਂ ਦੀ ਤਾਰੀਖ ਲਿਖੋ","opened_title":"ਖੁੱਲ੍ਹੀਆਂ ਦਵਾਈਆਂ ਟ੍ਰੈਕਰ","opened_sub":"ਸਿਰਪ ਅਤੇ ਖੋਲ੍ਹਣ ਤੋਂ ਬਾਅਦ ਸੀਮਿਤ ਸਮੇਂ ਲਈ ਵਰਤੀਆਂ ਜਾਣ ਵਾਲੀਆਂ ਦਵਾਈਆਂ ਲਈ।","opened_name":"ਦਵਾਈ / ਸਿਰਪ ਦਾ ਨਾਮ","opened_opened":"ਖੋਲ੍ਹਣ ਦੀ ਤਾਰੀਖ","opened_labeldate":"ਖੋਲ੍ਹਣ ਤੋਂ ਬਾਅਦ ਆਖਰੀ ਵਰਤੋਂ ਤਾਰੀਖ (ਲੇਬਲ/ਫਾਰਮਾਸਿਸਟ ਮੁਤਾਬਕ)","opened_expiry":"ਪੈਕ ਉੱਤੇ ਛਪੀ ਮਿਆਦ ਦੀ ਤਾਰੀਖ","opened_add":"ਸ਼ਾਮਲ ਕਰੋ","opened_note":"ਜ਼ਰੂਰੀ: ਅੰਦਾਜ਼ਾ ਨਾ ਲਗਾਓ ਕਿ ਸਿਰਪ ਖੋਲ੍ਹਣ ਤੋਂ ਬਾਅਦ ਕਿੰਨੇ ਦਿਨ ਠੀਕ ਰਹਿੰਦਾ ਹੈ। ਲੇਬਲ/ਪਰਚੇ ਦੀ ਤਾਰੀਖ ਲਿਖੋ ਜਾਂ ਫਾਰਮਾਸਿਸਟ ਤੋਂ ਪੁਸ਼ਟੀ ਕਰੋ। ਪਤਾ ਨਾ ਹੋਵੇ ਤਾਂ ਵਰਤਣ ਤੋਂ ਪਹਿਲਾਂ ਪੁੱਛੋ। ਦੋ ਤਾਰੀਖਾਂ ਵਿੱਚੋਂ ਪਹਿਲੀ ਤਾਰੀਖ ਮੰਨੋ।","opened_empty":"ਹਾਲੇ ਕੋਈ ਖੁੱਲ੍ਹੀ ਦਵਾਈ ਨਹੀਂ ਜੋੜੀ ਗਈ।","opened_status_ok":"ਦਰਜ ਤਾਰੀਖਾਂ ਦੇ ਅੰਦਰ ਹੈ","opened_status_soon":"ਆਖਰੀ ਤਾਰੀਖ ਅੱਜ ਜਾਂ ਅਗਲੇ 3 ਦਿਨਾਂ ਵਿੱਚ ਹੈ","opened_status_expired":"ਵਰਤੋਂ ਨਾ ਕਰੋ: ਤਾਰੀਖ ਲੰਘ ਗਈ ਹੈ","opened_status_missing":"ਤਾਰੀਖ ਦੀ ਜਾਣਕਾਰੀ ਅਧੂਰੀ ਹੈ — ਫਾਰਮਾਸਿਸਟ ਤੋਂ ਪੁੱਛੋ","opened_delete":"ਹਟਾਓ","opened_saved":"ਵੇਰਵੇ ਸੰਭਾਲੇ ਗਏ।","opened_need":"ਦਵਾਈ ਦਾ ਨਾਮ, ਖੋਲ੍ਹਣ ਦੀ ਤਾਰੀਖ, ਖੋਲ੍ਹਣ ਤੋਂ ਬਾਅਦ ਆਖਰੀ ਤਾਰੀਖ ਅਤੇ ਪੈਕ ਦੀ ਮਿਆਦ ਭਰੋ।","opened_row_opened":"ਖੋਲ੍ਹਿਆ","opened_row_useby":"ਖੋਲ੍ਹਣ ਤੋਂ ਬਾਅਦ ਆਖਰੀ ਤਾਰੀਖ","opened_row_pack":"ਪੈਕ ਮਿਆਦ","opened_row_final":"ਅੰਤਿਮ ਤਾਰੀਖ","opened_reminder":"ਹਰ ਵਾਰ ਲੇਬਲ ਵੇਖੋ। ਇਹ ਸਿਰਫ਼ ਯਾਦ ਦਿਵਾਉਣ ਲਈ ਹੈ; ਨਿਰਮਾਤਾ ਦੀਆਂ ਹਦਾਇਤਾਂ ਜਾਂ ਫਾਰਮਾਸਿਸਟ ਦੀ ਸਲਾਹ ਦਾ ਬਦਲ ਨਹੀਂ।"},"or":{"nav_opened":"ଖୋଲା ଔଷଧର ଅବଧି","page_opened":"ଖୋଲା ଔଷଧର ଅବଧି","page_opened_sub":"ଖୋଲିବା ଓ ଶେଷ ବ୍ୟବହାର ତାରିଖ ଲେଖନ୍ତୁ","opened_title":"ଖୋଲା ଔଷଧ ଟ୍ରାକର୍","opened_sub":"ସିରପ୍ ଏବଂ ଖୋଲିବା ପରେ ସୀମିତ ସମୟ ପାଇଁ ବ୍ୟବହାର ହେଉଥିବା ଔଷଧ ପାଇଁ।","opened_name":"ଔଷଧ / ସିରପ୍ ନାମ","opened_opened":"ଖୋଲିବା ତାରିଖ","opened_labeldate":"ଖୋଲିବା ପରେ ଶେଷ ବ୍ୟବହାର ତାରିଖ (ଲେବଲ୍/ଫାର୍ମାସିଷ୍ଟ ଅନୁଯାୟୀ)","opened_expiry":"ପ୍ୟାକ୍‌ରେ ଛପା ମିଆଦ ତାରିଖ","opened_add":"ଯୋଡନ୍ତୁ","opened_note":"ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ: ସିରପ୍ ଖୋଲିବା ପରେ କେତେ ଦିନ ଚାଲିବ ବୋଲି ଅନୁମାନ କରନ୍ତୁ ନାହିଁ। ଲେବଲ୍/ପତ୍ରିକାର ତାରିଖ ଲେଖନ୍ତୁ କିମ୍ବା ଫାର୍ମାସିଷ୍ଟଙ୍କୁ ପଚାରନ୍ତୁ। ଦୁଇ ତାରିଖ ମଧ୍ୟରୁ ଆଗର ତାରିଖ ମାନନ୍ତୁ।","opened_empty":"ଏପର୍ଯ୍ୟନ୍ତ କୌଣସି ଖୋଲା ଔଷଧ ଯୋଡାଯାଇନାହିଁ।","opened_status_ok":"ଲେଖା ତାରିଖ ମଧ୍ୟରେ ଅଛି","opened_status_soon":"ଶେଷ ତାରିଖ ଆଜି କିମ୍ବା ଆଗାମୀ 3 ଦିନରେ","opened_status_expired":"ବ୍ୟବହାର କରନ୍ତୁ ନାହିଁ: ତାରିଖ ଗତ ହୋଇଛି","opened_status_missing":"ତାରିଖ ଅସମ୍ପୂର୍ଣ୍ଣ — ଫାର୍ମାସିଷ୍ଟଙ୍କୁ ପଚାରନ୍ତୁ","opened_delete":"ହଟାନ୍ତୁ","opened_saved":"ବିବରଣୀ ସଞ୍ଚୟ ହେଲା।","opened_need":"ଔଷଧ ନାମ, ଖୋଲିବା ତାରିଖ, ଖୋଲିବା ପରେ ଶେଷ ତାରିଖ ଓ ପ୍ୟାକ୍ ମିଆଦ ତାରିଖ ଦିଅନ୍ତୁ।","opened_row_opened":"ଖୋଲା ତାରିଖ","opened_row_useby":"ଖୋଲିବା ପରେ ଶେଷ ତାରିଖ","opened_row_pack":"ପ୍ୟାକ୍ ମିଆଦ","opened_row_final":"ଶେଷ ତାରିଖ","opened_reminder":"ପ୍ରତିଥର ଲେବଲ୍ ଦେଖନ୍ତୁ। ଏହା କେବଳ ସ୍ମରଣ କରାଏ; ନିର୍ମାତାଙ୍କ ନିର୍ଦ୍ଦେଶ କିମ୍ବା ଫାର୍ମାସିଷ୍ଟଙ୍କ ପରାମର୍ଶର ବିକଳ୍ପ ନୁହେଁ।"},"as":{"nav_opened":"খোলাৰ পিছত ঔষধৰ ম্যাদ","page_opened":"খোলাৰ পিছত ঔষধৰ ম্যাদ","page_opened_sub":"খোলাৰ আৰু শেষ ব্যৱহাৰৰ তাৰিখ লিখক","opened_title":"খোলা ঔষধৰ ট্ৰেকাৰ","opened_sub":"চিৰাপ আৰু খোলাৰ পিছত সীমিত সময় ব্যৱহাৰ কৰিবলগীয়া ঔষধৰ বাবে।","opened_name":"ঔষধ / চিৰাপৰ নাম","opened_opened":"খোলাৰ তাৰিখ","opened_labeldate":"খোলাৰ পিছত ব্যৱহাৰৰ শেষ তাৰিখ (লেবেল/ফাৰ্মাচিষ্টৰ মতে)","opened_expiry":"পেকেটত ছপা ম্যাদ শেষৰ তাৰিখ","opened_add":"যোগ কৰক","opened_note":"গুৰুত্বপূৰ্ণ: চিৰাপ খোলাৰ পিছত কিমান দিন ব্যৱহাৰ কৰিব পাৰি অনুমান নকৰিব। লেবেল/লিফলেটৰ তাৰিখ লিখক বা ফাৰ্মাচিষ্টৰ পৰা নিশ্চিত কৰক। দুয়োটা তাৰিখৰ ভিতৰত আগৰটো মানক।","opened_empty":"এতিয়ালৈকে খোলা ঔষধ যোগ কৰা হোৱা নাই।","opened_status_ok":"লিখা তাৰিখৰ ভিতৰত আছে","opened_status_soon":"শেষ তাৰিখ আজি বা অহা 3 দিনৰ ভিতৰত","opened_status_expired":"ব্যৱহাৰ নকৰিব: তাৰিখ পাৰ হৈছে","opened_status_missing":"তাৰিখ অসম্পূৰ্ণ — ফাৰ্মাচিষ্টৰ পৰা নিশ্চিত কৰক","opened_delete":"আঁতৰাওক","opened_saved":"তথ্য সংৰক্ষণ কৰা হ’ল।","opened_need":"ঔষধৰ নাম, খোলাৰ তাৰিখ, খোলাৰ পিছৰ শেষ তাৰিখ আৰু পেকেটৰ ম্যাদ লিখক।","opened_row_opened":"খোলা হৈছে","opened_row_useby":"খোলাৰ পিছৰ শেষ তাৰিখ","opened_row_pack":"পেকেটৰ ম্যাদ","opened_row_final":"শেষ তাৰিখ","opened_reminder":"প্ৰতিবাৰ লেবেল চাওক। এইটো কেৱল সোঁৱৰাই দিয়াৰ বাবে; নিৰ্মাতাৰ নিৰ্দেশ বা ফাৰ্মাচিষ্টৰ পৰামৰ্শৰ বিকল্প নহয়।"},"ur":{"nav_opened":"کھلی دوا کی مدت","page_opened":"کھلی دوا کی مدت","page_opened_sub":"کھولنے اور آخری استعمال کی تاریخ درج کریں","opened_title":"کھلی دوا کا ٹریکر","opened_sub":"شربت اور کھولنے کے بعد محدود مدت تک استعمال ہونے والی ادویات کے لیے۔","opened_name":"دوا / شربت کا نام","opened_opened":"کھولنے کی تاریخ","opened_labeldate":"کھولنے کے بعد آخری استعمال کی تاریخ (لیبل/فارماسسٹ کے مطابق)","opened_expiry":"پیک پر درج میعاد ختم ہونے کی تاریخ","opened_add":"شامل کریں","opened_note":"اہم: یہ اندازہ نہ لگائیں کہ شربت کھولنے کے بعد کتنے دن استعمال کیا جا سکتا ہے۔ لیبل/کتابچے کی تاریخ درج کریں یا فارماسسٹ سے تصدیق کریں۔ دونوں تاریخوں میں سے پہلے آنے والی تاریخ پر عمل کریں۔","opened_empty":"ابھی کوئی کھلی دوا شامل نہیں کی گئی۔","opened_status_ok":"درج تاریخوں کے اندر ہے","opened_status_soon":"آخری تاریخ آج یا اگلے 3 دن میں ہے","opened_status_expired":"استعمال نہ کریں: تاریخ گزر چکی ہے","opened_status_missing":"تاریخ نامکمل ہے — فارماسسٹ سے تصدیق کریں","opened_delete":"ہٹائیں","opened_saved":"تفصیلات محفوظ ہو گئیں۔","opened_need":"دوا کا نام، کھولنے کی تاریخ، کھولنے کے بعد آخری تاریخ اور پیک کی میعاد درج کریں۔","opened_row_opened":"کھولی گئی","opened_row_useby":"کھولنے کے بعد آخری تاریخ","opened_row_pack":"پیک کی میعاد","opened_row_final":"آخری تاریخ","opened_reminder":"ہر بار لیبل دیکھیں۔ یہ صرف یاد دہانی ہے؛ کمپنی کی ہدایات یا فارماسسٹ کے مشورے کا متبادل نہیں۔"}};
 
-function t(key){ return I18N[state.lang]?.[key] ?? OPENED_I18N[state.lang]?.[key] ?? I18N.en[key] ?? OPENED_I18N.en[key] ?? key; }
+function t(key){
+  const translated = I18N[state.lang]?.[key] ?? OPENED_I18N[state.lang]?.[key];
+  if (translated != null) return translated;
+  const english = I18N.en[key] ?? OPENED_I18N.en[key] ?? key;
+  return state.lang === "en" ? english : `[Translation unavailable for ${state.lang}; English text shown for review] ${english}`;
+}
+function validateTranslations(){
+  const langs = [...new Set([...Object.keys(I18N), ...Object.keys(OPENED_I18N)])];
+  const coreKeys = [...new Set([...Object.keys(I18N.en||{}), ...Object.keys(OPENED_I18N.en||{})])];
+  const audit = {};
+  for (const lang of langs) {
+    const missing = coreKeys.filter(key => I18N[lang]?.[key] == null && OPENED_I18N[lang]?.[key] == null);
+    audit[lang] = { total: coreKeys.length, missingCount: missing.length, missingKeys: missing };
+  }
+  window.AMR_GUARD_TRANSLATION_AUDIT = audit;
+  return audit;
+}
 
 function applyLang(){
   document.documentElement.lang = state.lang;
-  document.documentElement.dir = state.lang === "ur" ? "rtl" : "ltr";
+  document.documentElement.dir = "ltr";
 
   $$("[data-i18n]").forEach(el => {
     const key = el.dataset.i18n;
@@ -900,6 +977,7 @@ function applyLang(){
   }
 }
 function setLang(lang){
+  if (!["en","hi","te"].includes(lang)) lang = "en";
   state.lang = lang;
   localStorage.setItem("ab_lang", lang);
   applyLang();
@@ -939,23 +1017,6 @@ const esc = s => String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">
 const fmtDate = ts => ts ? new Date(ts).toLocaleString(state.lang==="hi"?"hi-IN":state.lang==="te"?"te-IN":"en-IN") : "—";
 const fmtDay = ts => ts ? new Date(ts).toLocaleDateString(state.lang==="hi"?"hi-IN":state.lang==="te"?"te-IN":"en-IN") : "—";
 const shortUid = u => (u||"").slice(0,8);
-
-// Formats timestamp as "28-10-2026 11:54:00 PM"
-function formatEventDateTime(ts) {
-    if (!ts) return "—";
-    const d = new Date(ts);
-    const pad = n => String(n).padStart(2, '0');
-    
-    let hours = d.getHours();
-    const minutes = pad(d.getMinutes());
-    const seconds = pad(d.getSeconds());
-    const ampm = hours >= 12 ? 'PM' : 'AM';
-    hours = hours % 12;
-    hours = hours ? hours : 12; // the hour '0' should be '12'
-    
-    return `${pad(d.getDate())}-${pad(d.getMonth() + 1)}-${d.getFullYear()} ${pad(hours)}:${minutes}:${seconds} ${ampm}`;
-}
-
 function newId(p){const r=crypto.getRandomValues(new Uint8Array(9));const b=btoa(String.fromCharCode(...r)).replace(/[+/=]/g,"").slice(0,12);return `${p}_${b}`}
 function newPatientId(){const r=crypto.getRandomValues(new Uint8Array(6));const b=btoa(String.fromCharCode(...r)).replace(/[+/=]/g,"").slice(0,8).toUpperCase();return `PAT_${b}`}
 function normalizePatientId(raw){return String(raw||"").trim().toUpperCase().replace(/\s+/g,"_")}
@@ -1069,7 +1130,15 @@ $("#genPatId").onclick = () => {
 };
 
 async function ensureSignUpPatId(){
-  const id = normalizePatientId($("#suPatId").value);
+  let id = normalizePatientId($("#suPatId").value);
+  // Automatically generate a unique patient ID when the user leaves it blank.
+  if (!id) {
+    for (let attempt=0; attempt<5; attempt++) {
+      const candidate = newPatientId();
+      const candidateCheck = await checkPatIdAvailability(candidate);
+      if (candidateCheck.ok) { id = candidate; $("#suPatId").value = id; setPatIdMsg(`${t("pat_id_available")} · ${id}`, "ok"); break; }
+    }
+  }
   if (!id) return { ok:false, msg:t("pat_id_required") };
   const res = await checkPatIdAvailability(id);
   setPatIdMsg(res.msg, res.cls);
@@ -1103,7 +1172,7 @@ $("#signUpForm").addEventListener("submit",async e=>{
     const initialRole = isAdmin ? "admin" : (isDoc ? "doctor" : "patient");
     const pendingReq = (!isP && !isDoc && !isAdmin); // Only pharmacists need approval now
     
-    const profile={uid,displayName:$("#suName").value.trim()||"Demo User",email,role:initialRole,requestedRole:pendingReq?role:null,status:"active",createdAt:Date.now(),createdAtStr:formatEventDateTime(Date.now()),autoConsentToPharmacists:true,pharmacyName:isPh?($("#suPharmName").value.trim()||""):null,pharmacyLocation:isPh?($("#suPharmLoc").value.trim()||""):null};
+    const profile={uid,displayName:$("#suName").value.trim()||"Demo User",email,role:initialRole,requestedRole:pendingReq?role:null,status:"active",createdAt:Date.now(),autoConsentToPharmacists:true,pharmacyName:isPh?($("#suPharmName").value.trim()||""):null,pharmacyLocation:isPh?($("#suPharmLoc").value.trim()||""):null};
     if(isP){
       profile.age=$("#suAge").value?Number($("#suAge").value):null;
       profile.weightKg=$("#suWeight").value?Number($("#suWeight").value):null;
@@ -1120,7 +1189,7 @@ $("#signUpForm").addEventListener("submit",async e=>{
       }
     }
     await set(ref(db,dbPath(`users/${uid}`)),profile);
-    if(pendingReq){const rid=newId("REQ");await set(ref(db,dbPath(`roleRequests/${rid}`)),{id:rid,uid,email,requestedRole:role,pharmacyName:$("#suPharmName").value.trim()||"",pharmacyLocation:$("#suPharmLoc").value.trim()||"",status:"pending",createdAt:Date.now(),createdAtStr:formatEventDateTime(Date.now())});toast(t("msg_pending"),"ok",6000)}else{toast(t("msg_account_created"),"ok")}
+    if(pendingReq){const rid=newId("REQ");await set(ref(db,dbPath(`roleRequests/${rid}`)),{id:rid,uid,email,requestedRole:role,pharmacyName:$("#suPharmName").value.trim()||"",pharmacyLocation:$("#suPharmLoc").value.trim()||"",status:"pending",createdAt:Date.now()});toast(t("msg_pending"),"ok",6000)}else{toast(t("msg_account_created"),"ok")}
     try{await sendEmailVerification(cred.user)}catch{}
   } catch(err){
     toast(authErr(err),"err");
@@ -1161,7 +1230,6 @@ $("#kioskOtpBtn").onclick = async () => {
             role: "patient",
             status: "active",
             createdAt: Date.now(),
-            createdAtStr: formatEventDateTime(Date.now()),
             autoConsentToPharmacists: true,
             demo: true,
             age: 34,
@@ -1192,93 +1260,47 @@ $("#kioskAdminLogin").onclick = (e) => {
   $("#authScreen").classList.remove("hidden");
 };
 
-/* ================= Reminder Engine ================= */
+/* ================= Medicine Reminder Engine ================= */
 let reminderInterval = null;
-const REMINDED_KEY = "ab_reminded_doses";
-
-function startReminderEngine() {
-  if (reminderInterval) clearInterval(reminderInterval);
-  if (!state.user || state.profile?.role !== "patient") return;
-  
-  reminderInterval = setInterval(async () => {
-    const now = new Date();
-    const hr = now.getHours();
-    let slot = null;
-    if (hr >= 8 && hr < 12) slot = "morning";
-    else if (hr >= 13 && hr < 17) slot = "afternoon";
-    else if (hr >= 19 && hr < 23) slot = "evening";
-    
-    if (!slot) return; // Not time for meds
-    
-    const todayKey = now.toISOString().slice(0, 10);
-    const reminded = JSON.parse(localStorage.getItem(REMINDED_KEY) || "{}");
-    
-    const rs = await get(ref(db, dbPath("prescriptions")));
-    const all = rs.val() || {};
-    const mine = Object.entries(all).filter(([id, r]) => r.patientUid === state.user.uid && r.status === "active");
-    
-    for (const [rxId, r] of mine) {
-      for (const [mId, m] of Object.entries(r.medicines || {})) {
-        if (!m[slot]) continue; // Not scheduled for this slot
-        const key = `${todayKey}_${rxId}_${mId}`;
-        if (reminded[key]) continue; // Already reminded
-        
-        // Check if already taken today
-        const savedLog = state.profile.doseLog && state.profile.doseLog.date === todayKey ? state.profile.doseLog.items || {} : {};
-        if (savedLog[`${rxId}_${mId}`] > 0) continue; // Assuming 1 dose per slot for simplicity
-        
-        // Trigger Reminder
-        reminded[key] = true;
-        localStorage.setItem(REMINDED_KEY, JSON.stringify(reminded));
-        
-        showReminderToast(rxId, mId, m.name, m.dosage);
-      }
-    }
-  }, 60000); // Check every minute
+const REMINDED_KEY = "ab_reminded_doses_v2";
+function readReminded(){ try { const v=JSON.parse(localStorage.getItem(REMINDED_KEY)||"{}"); return v&&typeof v==="object"?v:{}; } catch { return {}; } }
+function writeReminded(v){ try { localStorage.setItem(REMINDED_KEY, JSON.stringify(v)); } catch(e){ console.warn("Could not persist reminder de-duplication",e); } }
+function reminderSlot(now){ const mins=now.getHours()*60+now.getMinutes(); if(mins>=8*60&&mins<12*60)return "morning"; if(mins>=13*60&&mins<17*60)return "afternoon"; if(mins>=19*60&&mins<23*60)return "evening"; return null; }
+function startReminderEngine(){
+  if(reminderInterval) clearInterval(reminderInterval);
+  if(!state.user || state.profile?.role!=="patient") return;
+  const check=async()=>{
+    if(!state.user || state.profile?.role!=="patient" || document.hidden) return;
+    const now=new Date(), slot=reminderSlot(now); if(!slot)return;
+    const todayKey=`${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,"0")}-${String(now.getDate()).padStart(2,"0")}`;
+    try{
+      const rs=await get(ref(db,dbPath("prescriptions"))), all=rs.val()||{};
+      const mine=Object.entries(all).filter(([,r])=>r&&r.patientUid===state.user.uid&&r.status==="active"&&(!r.expiresAt||Number(r.expiresAt)>now.getTime()));
+      const reminded=readReminded();
+      for(const [rxId,r] of mine){ for(const [mId,m] of Object.entries(r.medicines||{})){
+        if(!m||!m[slot]||(m.expiry&&Number(m.expiry)<now.getTime()))continue;
+        const key=`${todayKey}_${rxId}_${mId}_${slot}`; if(reminded[key])continue;
+        const p=state.profile||{}; const taken=p.takenToday?.date===todayKey?p.takenToday.items||{}:{};
+        const doseKey=`${rxId}_${mId}_${slot}`; if(taken[doseKey]){reminded[key]=true;continue;}
+        reminded[key]=true; writeReminded(reminded);
+        showReminderToast(rxId,mId,m.name,m.dosage,slot);
+        if("Notification" in window && Notification.permission==="granted"){
+          try { const n=new Notification(t("notif_title"),{body:`${t("notif_body")} ${m.name||""} ${m.dosage||""}`,tag:key}); n.onclick=()=>{window.focus();goTo("patient","today");n.close();}; }
+          catch(e){console.warn("Browser notification unavailable; in-app reminder shown",e);}
+        }
+      }}
+      // Retain only recent de-duplication keys so storage does not grow indefinitely.
+      const keys=Object.keys(reminded); if(keys.length>500){for(const k of keys.slice(0,keys.length-350))delete reminded[k];writeReminded(reminded);}
+    }catch(err){console.warn("Reminder check unavailable; in-app checks will retry",err);}
+  };
+  void check(); reminderInterval=setInterval(check,60000);
 }
-
-function showReminderToast(rxId, mId, medName, medDosage) {
-  const w = $("#toasts");
-  const el = document.createElement("div");
-  el.className = "toast warn";
-  el.style.minWidth = "300px";
-  el.innerHTML = `
-    <div style="font-weight:700;margin-bottom:6px;">🔔 ${t("notif_title")}</div>
-    <div style="font-size:.9rem;margin-bottom:10px;">${t("notif_body")} <b>${esc(medName)}</b> (${esc(medDosage)})</div>
-    <div style="display:flex;gap:8px;">
-      <button class="btn small" style="flex:1;background:var(--ok)" data-taken>${t("notif_taken")}</button>
-      <button class="btn ghost small" style="flex:1" data-snooze>${t("notif_snooze")}</button>
-    </div>
-  `;
-  
-  const takenBtn = el.querySelector("[data-taken]");
-  const snoozeBtn = el.querySelector("[data-snooze]");
-  
-  takenBtn.onclick = async () => {
-    try {
-      const todayKey = new Date().toISOString().slice(0, 10);
-      const currentLog = state.profile.doseLog && state.profile.doseLog.date === todayKey ? state.profile.doseLog.items || {} : {};
-      const next = { ...currentLog, [`${rxId}_${mId}`]: (Number(currentLog[`${rxId}_${mId}`]) || 0) + 1 };
-      
-      await update(ref(db, dbPath(`users/${state.user.uid}`)), { doseLog: { date: todayKey, items: next, lastUpdated: formatEventDateTime(Date.now()) } });
-      state.profile.doseLog = { date: todayKey, items: next };
-      toast(t("notif_logged"), "ok");
-      el.remove();
-    } catch (e) {
-      toast(e.message, "err");
-    }
-  };
-  
-  snoozeBtn.onclick = () => {
-    // Remove from reminded so it pops up again next minute
-    const reminded = JSON.parse(localStorage.getItem(REMINDED_KEY) || "{}");
-    const todayKey = new Date().toISOString().slice(0, 10);
-    delete reminded[`${todayKey}_${rxId}_${mId}`];
-    localStorage.setItem(REMINDED_KEY, JSON.stringify(reminded));
-    el.remove();
-  };
-  
-  w.appendChild(el);
+function showReminderToast(rxId,mId,medName,medDosage,slot){
+  const w=$("#toasts"); if(!w)return;
+  const el=document.createElement("div"); el.className="toast warn"; el.style.minWidth="300px";
+  el.innerHTML=`<div style="font-weight:700;margin-bottom:6px;">🔔 ${t("notif_title")}</div><div style="font-size:.9rem;margin-bottom:10px;">${t("notif_body")} <b>${esc(medName||"")}</b> (${esc(medDosage||"")})</div><div style="display:flex;gap:8px;"><button class="btn small" style="flex:1;background:var(--ok)" data-taken>${t("notif_taken")}</button><button class="btn ghost small" style="flex:1" data-missed>${state.lang==="te"?"మిస్ అయింది":state.lang==="hi"?"छूट गई":"Mark missed"}</button><button class="btn ghost small" data-close aria-label="Dismiss">×</button></div>`;
+  const mark=async(status)=>{const now=new Date(),todayKey=`${now.getFullYear()}-${String(now.getMonth()+1).padStart(2,"0")}-${String(now.getDate()).padStart(2,"0")}`,key=`${rxId}_${mId}_${slot}`;try{const cur=state.profile?.takenToday?.date===todayKey?state.profile.takenToday.items||{}:{};const next={...cur,[key]:status};await update(ref(db,dbPath(`users/${state.user.uid}`)),{takenToday:{date:todayKey,items:next},[`doseHistory/${todayKey}/${key}`]:{status,recordedAt:Date.now(),prescriptionId:rxId,medicineId:mId,slot}});state.profile.takenToday={date:todayKey,items:next};toast(status==="taken"?(state.lang==="te"?"మోతాదు నమోదు చేయబడింది":state.lang==="hi"?"खुराक दर्ज की गई":"Dose marked as taken"):(state.lang==="te"?"మోతాదు మిస్ అయినట్లు నమోదు చేయబడింది":state.lang==="hi"?"खुराक छूट गई के रूप में दर्ज":"Dose marked as missed"),"ok");el.remove();}catch(e){toast(e.message||"Could not save dose status","err");}};
+  el.querySelector("[data-taken]").onclick=()=>mark("taken"); el.querySelector("[data-missed]").onclick=()=>mark("missed"); el.querySelector("[data-close]").onclick=()=>el.remove(); w.appendChild(el);
 }
 
 /* ================= Auth state ================= */
@@ -1304,7 +1326,7 @@ onAuthStateChanged(auth,async user=>{
   state.user=user;try{await reload(user)}catch{}
   let snap;try{snap=await get(ref(db,dbPath(`users/${user.uid}`)))}catch(err){toast("Cannot read profile: "+err.message,"err");return signOut(auth)}
   let profile;
-  if(!snap.exists()){profile={uid:user.uid,displayName:user.email.split("@")[0]||"Demo User",email:user.email,role:user.uid===PRESET_ADMIN_UID?"admin":"patient",requestedRole:null,status:"active",createdAt:Date.now(),createdAtStr:formatEventDateTime(Date.now()),autoConsentToPharmacists:true};try{await set(ref(db,dbPath(`users/${user.uid}`)),profile)}catch(e){toast("Could not create profile: "+e.message,"err");return signOut(auth)}}else{profile=snap.val()}
+  if(!snap.exists()){profile={uid:user.uid,displayName:user.email.split("@")[0]||"Demo User",email:user.email,role:user.uid===PRESET_ADMIN_UID?"admin":"patient",requestedRole:null,status:"active",createdAt:Date.now(),autoConsentToPharmacists:true};try{await set(ref(db,dbPath(`users/${user.uid}`)),profile)}catch(e){toast("Could not create profile: "+e.message,"err");return signOut(auth)}}else{profile=snap.val()}
   if(user.uid===PRESET_ADMIN_UID&&profile.role!=="admin"){try{await update(ref(db,dbPath(`users/${user.uid}`)),{role:"admin",status:"active"});profile.role="admin";profile.status="active"}catch(e){}}
   state.profile=profile;
   if(profile.status==="suspended"){toast("Account suspended.","err",6000);return signOut(auth)}
@@ -1330,7 +1352,6 @@ const NAV_KEYS = {
     { id:"today",      labelKey:"nav_today",      icon:"⏰" },
     { id:"rx",         labelKey:"nav_rx",         icon:"💊" },
     { id:"history",    labelKey:"nav_history",    icon:"📋" },
-    { id:"reminders",  labelKey:"nav_reminders",  icon:"📅" },
     { id:"opened",     labelKey:"nav_opened",     icon:"🧴" },
     { id:"profile",    labelKey:"nav_profile",    icon:"👤" }
   ],
@@ -1374,6 +1395,8 @@ function renderRoleNav(role){
 }
 
 async function goTo(role,page){
+  // Legacy deep links remain safe, but the standalone Reminders & Safety page is retired.
+  if (page === "reminders") page = "today";
   $$("#nav a").forEach(a=>a.classList.toggle("active",a.dataset.page===page));
   const mt={dash:["page_dash","page_dash_sub"],today:["page_today","page_today_sub"],rx:["page_rx","page_rx_sub"],history:["page_history","page_history_sub"],reminders:["page_reminders","page_reminders_sub"],opened:["page_opened","page_opened_sub"],verify:["page_verify","page_verify_sub"],newRx:["page_newRx","page_newRx_sub"],patients:["page_patients","page_patients_sub"],dispense:["page_dispense","page_dispense_sub"],dispenseLog:["page_dispenseLog","page_dispenseLog_sub"],dispenses:["page_dispenses","page_dispenses_sub"],audit:["page_audit","page_audit_sub"],requests:["page_requests","page_requests_sub"],users:["page_users","page_users_sub"],rxstats:["page_rxstats","page_rxstats_sub"],profile:["page_profile","page_profile_sub"]}[page]||["page_dash","page_dash_sub"];
   $("#pageTitle").textContent=t(mt[0]);$("#pageSub").textContent=t(mt[1]);
@@ -1385,7 +1408,11 @@ async function goTo(role,page){
     else if(role==="admin") await adminView(page);
   } catch(err){
     console.error(err);
-    v.innerHTML = `<div class="panel"><p class="chip danger">Error</p><p>${esc(err.message)}</p></div>`;
+    const detail = err?.code === "PERMISSION_DENIED" || /permission_denied|permission denied/i.test(String(err?.message||""))
+      ? "Access was denied by the database rules for this account. Ask the administrator to review permissions; do not broaden public access."
+      : (/network|offline|unavailable|fetch/i.test(String(err?.message||"")) ? "The data service could not be reached. Check your connection and retry." : (err?.message||"An unexpected error occurred."));
+    v.innerHTML = `<div class="panel"><p class="chip danger">Could not open this section</p><p>${esc(detail)}</p><button type="button" class="btn ghost" id="retryPage">Retry</button></div>`;
+    const retry=$("#retryPage"); if(retry) retry.onclick=()=>goTo(role,page);
   } finally {
     $$("[data-i18n]").forEach(el => { if (el.children.length === 0) el.textContent = t(el.dataset.i18n); });
     $("#pageTitle").textContent = t(mt[0]);
@@ -1422,7 +1449,7 @@ document.addEventListener("click", (e) => {
 });
 
 /* ================= Shared helpers ================= */
-async function logAudit(action,targetId,extra={}){const uid=auth.currentUser?.uid;if(!uid)return;const id=newId("AUD");try{await set(ref(db,dbPath(`auditLogs/${id}`)),{id,actorUid:uid,action,targetId:targetId||null,timestamp:Date.now(),timestampStr:formatEventDateTime(Date.now()),...extra})}catch(e){}}
+async function logAudit(action,targetId,extra={}){const uid=auth.currentUser?.uid;if(!uid)return;const id=newId("AUD");try{await set(ref(db,dbPath(`auditLogs/${id}`)),{id,actorUid:uid,action,targetId:targetId||null,timestamp:Date.now(),...extra})}catch(e){}}
 async function getProfile(uid){const s=await get(ref(db,dbPath(`users/${uid}`)));return s.exists()?s.val():null}
 function statCard(label,value,chip,attrs=""){return `<div class="card" ${attrs}><h3>${esc(label)}</h3><div class="stat">${esc(value)}</div>${chip?`<div class="chip ${chip.t}">${esc(chip.l)}</div>`:""}</div>`}
 async function checkAntibioticRisk(uid){const s=await get(ref(db,dbPath("prescriptions")));const all=s.val()||{};const mine=Object.values(all).filter(r=>r.patientUid===uid);const now=Date.now();const active=mine.filter(r=>r.status==="active"&&(!r.expiresAt||r.expiresAt>now));let meds=0;for(const r of active)for(const m of Object.values(r.medicines||{})){if(m.expiry&&m.expiry<now)continue;meds++}return{activeRxCount:active.length,activeMeds:meds}}
@@ -1465,7 +1492,7 @@ async function patientView(page){
       if(!name||!openedDate||!afterOpeningUseBy||!packExpiry){toast(t("opened_need"),"err");return;}
       if(afterOpeningUseBy<openedDate||packExpiry<openedDate){toast(t("opened_need"),"err");return;}
       const id=newId("OPEN");
-      try{await set(ref(db,dbPath(`users/${uid}/openedMedicines/${id}`)),{id,name,openedDate,afterOpeningUseBy,packExpiry,createdAt:Date.now(),createdAtStr:formatEventDateTime(Date.now())});toast(t("opened_saved"),"ok");await goTo("patient","opened");}
+      try{await set(ref(db,dbPath(`users/${uid}/openedMedicines/${id}`)),{id,name,openedDate,afterOpeningUseBy,packExpiry,createdAt:Date.now()});toast(t("opened_saved"),"ok");await goTo("patient","opened");}
       catch(err){toast(err.message,"err");}
     };
     $$('[data-opened-delete]').forEach(btn=>btn.onclick=async()=>{try{await remove(ref(db,dbPath(`users/${uid}/openedMedicines/${btn.dataset.openedDelete}`)));await goTo("patient","opened");}catch(err){toast(err.message,"err");}});
@@ -1495,12 +1522,16 @@ async function patientView(page){
     const rs=await get(ref(db,dbPath("prescriptions")));const all=rs.val()||{};const mine=Object.entries(all).filter(([id,r])=>r.patientUid===uid);const now=Date.now();
     const slots={morning:[],afternoon:[],evening:[]};
     for(const [rxId,r] of mine){if(r.status!=="active")continue;if(r.expiresAt&&r.expiresAt<now)continue;for(const [mId,m] of Object.entries(r.medicines||{})){if(m.expiry&&m.expiry<now)continue;for(const s of ["morning","afternoon","evening"])if(m[s])slots[s].push({rxId,mId,m})}}
-    const todayKey=new Date().toISOString().slice(0,10);const taken=p.takenToday&&p.takenToday.date===todayKey?p.takenToday.items||{}:{};
-    function slotH(name,list){if(!list.length)return `<div class="col"><h3 style="font-size:.85rem;color:var(--muted);text-transform:uppercase">${esc(t(name))}</h3><p class="muted" style="font-size:.82rem">${esc(t("nothing_scheduled"))}</p></div>`;return `<div class="col"><h3 style="font-size:.85rem;color:var(--muted);text-transform:uppercase">${esc(t(name))}</h3>${list.map(it=>{const k=`${it.rxId}_${it.mId}_${name}`;return `<label class="chk" style="display:block;margin-bottom:6px"><input type="checkbox" data-take="${esc(k)}" ${taken[k]?"checked":""} style="width:auto;margin-right:6px" />${esc(it.m.name)} <span class="muted">(${esc(it.m.dosage||"")})</span></label>`}).join("")}</div>`}
-    views.innerHTML=`<div class="notice">${esc(t("checklist_note"))}</div>
+    const localNow=new Date();const todayKey=`${localNow.getFullYear()}-${String(localNow.getMonth()+1).padStart(2,"0")}-${String(localNow.getDate()).padStart(2,"0")}`;const taken=p.takenToday&&p.takenToday.date===todayKey?p.takenToday.items||{}:{};
+    const expiryRows=[]; for(const [rxId,r] of mine){if(r.status!=="active")continue;for(const [mId,m] of Object.entries(r.medicines||{})){if(!m||!m.expiry)continue;const exp=typeof m.expiry==="number"?m.expiry:new Date(m.expiry).getTime();if(!Number.isFinite(exp))continue;const days=Math.ceil((new Date(new Date().toDateString()).getTime()-exp)/86400000)*-1;if(days<=30)expiryRows.push({name:m.name||"Medicine",expiry:m.expiry,days,expired:days<0});}}
+    function slotH(name,list){if(!list.length)return `<div class="col"><h3 style="font-size:.85rem;color:var(--muted);text-transform:uppercase">${esc(t(name))}</h3><p class="muted" style="font-size:.82rem">${esc(t("nothing_scheduled"))}</p></div>`;return `<div class="col"><h3 style="font-size:.85rem;color:var(--muted);text-transform:uppercase">${esc(t(name))}</h3>${list.map(it=>{const k=`${it.rxId}_${it.mId}_${name}`;const status=taken[k];return `<label class="chk" style="display:block;margin-bottom:6px"><input type="checkbox" data-take="${esc(k)}" ${status==="taken"||status===true?"checked":""} style="width:auto;margin-right:6px" />${esc(it.m.name)} <span class="muted">(${esc(it.m.dosage||"")})</span> ${status==="missed"?`<span class="chip warn">${state.lang==="te"?"మిస్ అయింది":state.lang==="hi"?"छूट गई":"Missed"}</span>`:""}</label>`}).join("")}</div>`}
+    views.innerHTML=`<div class="notice">${esc(t("checklist_note"))}<br>${esc(t("notify_status"))}</div>
+      <div class="panel" style="margin-bottom:16px"><div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"><button class="btn" id="enableNotificationsBtn">${esc(t("notify_enable"))}</button><span class="muted" id="notificationPermissionText">${"Notification" in window ? (Notification.permission==="granted"?"Browser notifications allowed":Notification.permission==="denied"?esc(t("notify_denied")):"Permission not requested") : esc(t("notify_denied"))}</span></div></div>
       <div class="panel"><h2>${esc(t("today_header"))} (${new Date().toLocaleDateString(state.lang==="hi"?"hi-IN":state.lang==="te"?"te-IN":"en-IN")})</h2><div class="row">${slotH("morning",slots.morning)}${slotH("afternoon",slots.afternoon)}${slotH("evening",slots.evening)}</div></div>
+      <div class="panel" style="margin-top:16px"><h2>${esc(t("expiry_alerts"))}</h2>${expiryRows.length?`<ul style="padding-left:20px">${expiryRows.map(x=>`<li><strong>${esc(x.name)}</strong> — ${esc(String(x.expiry))}: <span class="chip ${x.expired?"danger":"warn"}">${esc(t(x.expired?"expiry_expired":"expiry_soon"))}</span></li>`).join("")}</ul>`:`<p class="muted">${esc(t("no_expiry_alerts"))}</p>`}</div>
       <div class="panel" style="margin-top:16px"><h2>${esc(t("export_reminders_title"))}</h2><p class="sub">${esc(t("export_reminders_sub"))}</p><button class="btn" id="exportIcs">${esc(t("export_ics"))}</button></div>`;
-    $$("#views [data-take]").forEach(cb=>{cb.onchange=async()=>{const k=cb.dataset.take;const next={...taken,[k]:cb.checked};try{await update(ref(db,dbPath(`users/${uid}`)),{takenToday:{date:todayKey,items:next}})}catch(e){toast(e.message,"err")}}});
+    $$("#views [data-take]").forEach(cb=>{cb.onchange=async()=>{const k=cb.dataset.take;const next={...taken,[k]:cb.checked?"taken":"pending"};try{await update(ref(db,dbPath(`users/${uid}`)),{takenToday:{date:todayKey,items:next},[`doseHistory/${todayKey}/${k}`]:{status:cb.checked?"taken":"pending",recordedAt:Date.now()}});state.profile.takenToday={date:todayKey,items:next};}catch(e){toast(e.message,"err");cb.checked=!cb.checked}}});
+    const enableBtn=$("#enableNotificationsBtn"); if(enableBtn)enableBtn.onclick=async()=>{if(!("Notification" in window)){toast(t("notify_denied"),"warn",6000);return;}try{const permission=await Notification.requestPermission();const label=$("#notificationPermissionText");if(label)label.textContent=permission==="granted"?"Browser notifications allowed":permission==="denied"?t("notify_denied"):"Permission not granted";if(permission==="granted"){toast("Browser notifications enabled while the app is open.","ok");startReminderEngine()}else toast(t("notify_denied"),"warn",6000);}catch(e){toast("Could not request notification permission. In-app reminders remain available.","warn",6000)}};
     $("#exportIcs").onclick=()=>{const ev=[];for(const [rxId,r] of mine){if(r.status!=="active")continue;for(const [mId,m] of Object.entries(r.medicines||{})){if(m.expiry&&m.expiry<now)continue;const hrs=[];if(m.morning)hrs.push(9);if(m.afternoon)hrs.push(14);if(m.evening)hrs.push(20);const dd=m.duration?parseInt(m.duration)||5:5;for(const h of hrs){const dt=new Date();dt.setHours(h,0,0,0);ev.push(...icsEvent({uid:`${rxId}-${mId}-${h}`,title:`💊 ${m.name} ${m.dosage||""}`,description:`Rx ${rxId} — ${m.name} ${m.dosage||""} (${m.frequency||""}). Demo.`,rrule:`FREQ=DAILY;COUNT=${dd}`,dtstart:dt.getTime()}))}}}if(!ev.length)return toast(t("msg_no_active_meds"),"err");downloadIcs(`reminders-${todayKey}.ics`,ev);toast(t("msg_calendar_downloaded"),"ok")};
     return;
   }
@@ -1530,70 +1561,36 @@ async function patientView(page){
   }
 
   if(page==="reminders"){
-    const rs=await get(ref(db,dbPath("prescriptions")));
-    const all=rs.val()||{};
-    
-    // BUG FIX: Safely extract data. Firebase might return it as an Object or Array.
-    const prescriptions = Array.isArray(all) ? all : Object.values(all);
-    
-    // Filter down to only the active, non-expired prescriptions for this specific patient
-    const mine = prescriptions.filter(r => 
-      r && 
-      r.patientUid === uid && 
-      r.status === "active" && 
-      (!r.expiresAt || r.expiresAt > Date.now())
-    );
+    let rs; try { rs=await get(ref(db,dbPath("prescriptions"))); }
+    catch(err){ console.error("Reminders prescription read failed",err); views.innerHTML=`<div class="panel"><div class="chip danger">Unable to load reminders</div><p>Prescription records could not be loaded. Check your connection and access permissions, then retry.</p><button class="btn" id="retryReminders">Retry</button></div>`;$("#retryReminders").onclick=()=>goTo("patient","reminders");return; }
+    const rawAll=rs.val()||{};const all=Object.fromEntries(Object.entries(rawAll).filter(([,r])=>r&&typeof r==="object"));
+    const mine=Object.entries(all).filter(([id,r])=>r.patientUid===uid && r.status==="active" && (!Number.isFinite(Number(r.expiresAt))||Number(r.expiresAt)>Date.now()));
+    const now=Date.now();
+    const todayKey=new Date().toISOString().slice(0,10);
+    const savedLog=p.doseLog&&p.doseLog.date===todayKey?p.doseLog.items||{}:{};
 
-    const now = Date.now();
-    const todayKey = new Date().toISOString().slice(0, 10);
-    const savedLog = p.doseLog && p.doseLog.date === todayKey ? p.doseLog.items || {} : {};
+    if(!mine.length){ views.innerHTML=`<div class="notice">${esc(t("rem_no_meds"))}</div>`; return; }
 
-    // If we have no valid prescriptions after filtering, show the empty message
-    if (!mine.length) { 
-      views.innerHTML = `<div class="notice">${esc(t("rem_no_meds"))}</div>`; 
-      return; 
-    }
-
-    // Build the rows safely
     let rows = [];
-    for (const r of mine) {
-      const meds = Object.entries(r.medicines || {});
-      for (const [mId, m] of meds) {
-        if (m.expiry && m.expiry < now) continue; // Skip expired individual medicines
-        
+    for (const [rxId, r] of mine) {
+      for (const [mId, m] of Object.entries(r.medicines||{})) {
+        if (!m || typeof m !== "object") continue;
+        if (m.expiry && Number.isFinite(Number(m.expiry)) && Number(m.expiry) < now) continue;
         const dailyLimit = getDoseLimit(m.name);
-        const taken = Number(savedLog[`${r.id}_${mId}`] || 0);
-        const status = taken >= dailyLimit ? "over" : (taken >= dailyLimit - 1 ? "near" : "ok");
-        const statusText = status === "over" ? t("rem_over") : (status === "near" ? t("rem_near") : t("rem_ok"));
-        const chipClass = status === "over" ? "danger" : (status === "near" ? "warn" : "ok");
-        
+        const taken = Number(savedLog[`${rxId}_${mId}`] || 0);
+        // Dose counts are adherence logs, not clinical dose validation. No configured validated rules exist here.
+        const status = "unknown";
+        const statusText = t("rem_status_unknown");
+        const chipClass = "info";
         const schedule = [];
         if (m.morning) schedule.push(t("morning"));
         if (m.afternoon) schedule.push(t("afternoon"));
         if (m.evening) schedule.push(t("evening"));
-        
-        rows.push({ 
-          rxId: r.id, 
-          mId, 
-          m, 
-          dailyLimit, 
-          taken, 
-          status, 
-          statusText, 
-          chipClass, 
-          schedule: schedule.join(" · "), 
-          limitReached: taken >= dailyLimit 
-        });
+        rows.push({ rxId, mId, m, dailyLimit, taken, status, statusText, chipClass, schedule: schedule.join(" · "), limitReached: dailyLimit != null && taken >= dailyLimit });
       }
     }
 
-    // If no valid medicines were found inside the prescriptions (e.g. all expired)
-    if (rows.length === 0) {
-      views.innerHTML = `<div class="notice">${esc(t("rem_no_meds"))}</div>`;
-      return;
-    }
-
-    const anyOver = rows.some(r => r.limitReached);
+    const anyOver = false; // Never infer overdose from a generic count of logged entries.
     const specialist = getSpecialistForDisease(p.disease);
     const ayurList = getAyurvedicSuggestions(p.disease);
     const logEntries = Object.entries(savedLog).filter(([,n]) => Number(n) > 0).map(([k,n]) => ({ k, n: Number(n) }));
@@ -1608,7 +1605,7 @@ async function patientView(page){
 
     views.innerHTML = `
       <div class="notice">${esc(t("rem_sub"))}</div>
-      
+      <div class="warning-box"><strong>${esc(t("rem_rule_not_configured"))}</strong></div>
       <div class="info-box" style="margin-bottom:16px">
         <h3 style="margin:0 0 8px;font-size:.95rem">🌿 ${esc(t("rem_remedy_title"))}</h3>
         <p style="margin:0 0 8px;font-size:.85rem">${esc(t("rem_remedy_body"))}</p>
@@ -1633,7 +1630,7 @@ async function patientView(page){
                 <td>${esc(r.m.name)} <span class="muted">(${esc(r.m.dosage||"")})</span></td>
                 <td>${esc(r.schedule)}</td>
                 <td>${r.taken}</td>
-                <td>${r.dailyLimit}</td>
+                <td>—</td>
                 <td><span class="chip ${r.chipClass}">${esc(r.statusText)}</span></td>
                 <td>
                   <button class="btn small" data-log="${esc(r.rxId)}|${esc(r.mId)}">${esc(t("rem_log_dose"))}</button>
@@ -1681,11 +1678,13 @@ async function patientView(page){
     $$("#views [data-log]").forEach(btn => {
       btn.onclick = async () => {
         const [rxId, mId] = btn.dataset.log.split("|");
+        if(!all[rxId]?.medicines?.[mId]) return toast("This medicine record is incomplete. Refresh reminders and verify the prescription.","err");
         const key = `${rxId}_${mId}`;
         const next = { ...savedLog, [key]: (Number(savedLog[key]) || 0) + 1 };
         try {
-          await update(ref(db, dbPath(`users/${uid}`)), { doseLog: { date: todayKey, items: next, lastUpdated: formatEventDateTime(Date.now()) } });
-          toast("Dose logged.", "ok");
+          await update(ref(db, dbPath(`users/${uid}`)), { doseLog: { date: todayKey, items: next } });
+          p.doseLog={date:todayKey,items:next};
+          toast("Reminder entry logged; this does not verify the dose as clinically safe.", "ok");
           goTo("patient", "reminders");
         } catch (e) { toast(e.message, "err"); }
       };
@@ -1697,7 +1696,7 @@ async function patientView(page){
         const key = `${rxId}_${mId}`;
         const next = { ...savedLog, [key]: Math.max(0, (Number(savedLog[key]) || 0) - 1) };
         try {
-          await update(ref(db, dbPath(`users/${uid}`)), { doseLog: { date: todayKey, items: next, lastUpdated: formatEventDateTime(Date.now()) } });
+          await update(ref(db, dbPath(`users/${uid}`)), { doseLog: { date: todayKey, items: next } });
           goTo("patient", "reminders");
         } catch (e) { toast(e.message, "err"); }
       };
@@ -1707,7 +1706,7 @@ async function patientView(page){
     if (resetBtn) resetBtn.onclick = async () => {
       if (!confirm("Reset today's dose log?")) return;
       try {
-        await update(ref(db, dbPath(`users/${uid}`)), { doseLog: { date: todayKey, items: {}, lastUpdated: formatEventDateTime(Date.now()) } });
+        await update(ref(db, dbPath(`users/${uid}`)), { doseLog: { date: todayKey, items: {} } });
         goTo("patient", "reminders");
       } catch (e) { toast(e.message, "err"); }
     };
@@ -1764,8 +1763,7 @@ async function patientView(page){
           age:$("#pAge").value?Number($("#pAge").value):null,
           weightKg:$("#pWeight").value?Number($("#pWeight").value):null,
           disease:$("#pDisease").value.trim()||null,
-          patientId: normalizePatientId($("#pPatId").value),
-          lastUpdated: formatEventDateTime(Date.now())
+          patientId: normalizePatientId($("#pPatId").value)
         };
         await update(ref(db,dbPath(`users/${uid}`)),patch);
         Object.assign(state.profile,patch);
@@ -1875,11 +1873,21 @@ async function doctorView(page){
   }
 
   if(page==="patients"){
+    // Role gate before reading patient records; Firebase rules must enforce this server-side too.
+    if(!["doctor","pharmacist","admin"].includes(state.profile?.role)){
+      views.innerHTML=`<div class="panel"><div class="chip danger">${esc(t("status_pending"))}</div><p class="muted">Your role is not permitted to view patient records.</p></div>`;return;
+    }
     const [us,rs]=await Promise.all([get(ref(db,dbPath("users"))),get(ref(db,dbPath("prescriptions")))]);
-    const patients=Object.values(us.val()||{}).filter(u=>u.role==="patient");const allRx=rs.val()||{};
+    const rawUsers=us.val()||{}, allRx=rs.val()||{};
+    const patients=Object.entries(rawUsers).map(([key,u])=>u&&typeof u==="object"?{...u,uid:u.uid||key}:null).filter(u=>u&&u.role==="patient");
+    const safeRx=Object.values(allRx).filter(r=>r&&typeof r==="object");
     views.innerHTML=`<div class="notice">${esc(t("profile_readonly"))}</div>
-      <div class="panel"><h2>${esc(t("nav_patients"))} (${patients.length})</h2>${patients.length?`<table><thead><tr><th>${esc(t("name"))}</th><th>${esc(t("patient_unique_id"))}</th><th>${esc(t("age"))}</th><th>${esc(t("weight"))}</th><th>${esc(t("disease"))}</th><th>${esc(t("prescriptions"))}</th><th>${esc(t("active"))}</th><th></th></tr></thead><tbody>${patients.map(u=>{const mine=Object.values(allRx).filter(r=>r.patientUid===u.uid);const active=mine.filter(r=>r.status==="active"&&(!r.expiresAt||r.expiresAt>Date.now()));return `<tr><td>${esc(u.displayName)}</td><td><span class="code">${esc(u.patientId||"—")}</span></td><td>${esc(u.age??"—")}</td><td>${esc(u.weightKg??"—")}</td><td>${esc(u.disease||"—")}</td><td>${mine.length}</td><td>${active.length}</td><td><button class="btn ghost small" data-vp="${esc(u.uid)}">${esc(t("view_rx"))}</button></td></tr>`}).join("")}</tbody></table>`:`<p class="muted">${esc(t("empty_patients"))}</p>`}</div>`;
-    $$("#views [data-vp]").forEach(b=>b.onclick=()=>showPatientRx(b.dataset.vp));
+      <div class="panel"><h2>${esc(t("nav_patients"))} (${patients.length})</h2>
+      <label for="patientSearch">Search patients</label><input id="patientSearch" type="search" placeholder="Search name, patient ID, condition" autocomplete="off" />
+      <div id="patientTableArea">${renderPatientRows(patients,safeRx)}</div></div>`;
+    const search=$("#patientSearch");search.addEventListener("input",()=>{const q=search.value.trim().toLowerCase();const filtered=patients.filter(u=>[u.displayName,u.patientId,u.disease,u.uid].some(v=>String(v??"").toLowerCase().includes(q)));$("#patientTableArea").innerHTML=renderPatientRows(filtered,safeRx);bindPatientRowButtons();});
+    bindPatientRowButtons();
+    function bindPatientRowButtons(){ $$("#patientTableArea [data-vp]").forEach(b=>b.onclick=()=>showPatientRx(b.dataset.vp)); }
     return;
   }
 
@@ -1887,7 +1895,7 @@ async function doctorView(page){
     views.innerHTML=`<div class="panel"><h2>${esc(t("page_profile"))}</h2>
       <div class="row"><div class="col"><label>${esc(t("display_name"))}</label><input id="pName" value="${esc(p.displayName||"")}" /></div><div class="col"><label>${esc(t("email"))}</label><input value="${esc(p.email||"")}" disabled /></div></div>
       <div style="margin-top:12px"><button class="btn" id="saveProfile">${esc(t("save"))}</button></div></div>`;
-    $("#saveProfile").onclick=async()=>{try{const patch={displayName:$("#pName").value.trim(),lastUpdated:formatEventDateTime(Date.now())};await update(ref(db,dbPath(`users/${uid}`)),patch);Object.assign(state.profile,patch);$("#whoName").textContent=patch.displayName||auth.currentUser.email;toast(t("msg_profile_saved"),"ok")}catch(e){toast(e.message,"err")}};
+    $("#saveProfile").onclick=async()=>{try{const patch={displayName:$("#pName").value.trim()};await update(ref(db,dbPath(`users/${uid}`)),patch);Object.assign(state.profile,patch);$("#whoName").textContent=patch.displayName||auth.currentUser.email;toast(t("msg_profile_saved"),"ok")}catch(e){toast(e.message,"err")}};
     return;
   }
 }
@@ -2026,11 +2034,6 @@ function renderDoctorRxForm(patient, container) {
     const expiresVal = $("#docExpires").value;
     const expiresAt = expiresVal ? new Date(expiresVal + "T23:59:59").getTime() : (Date.now() + 7 * 24 * 3600e3);
 
-    // Validate expiry date is not in the past
-    if (expiresAt < Date.now()) {
-        return toast("Error: Prescription expiry date cannot be in the past.", "err");
-    }
-
     const rxId = newId("RX");
     const rx = {
       id: rxId,
@@ -2042,15 +2045,11 @@ function renderDoctorRxForm(patient, container) {
       source: "doctor",
       status: "pending_dispense", // Doctor prescriptions must be dispensed by pharmacist
       issuedAt: Date.now(),
-      issuedAtStr: formatEventDateTime(Date.now()),
       expiresAt,
-      expiresAtStr: formatEventDateTime(expiresAt),
       instructions: ($("#docInstructions").value || "").trim(),
       medicines,
       createdAt: Date.now(),
-      createdAtStr: formatEventDateTime(Date.now()),
-      updatedAt: Date.now(),
-      updatedAtStr: formatEventDateTime(Date.now())
+      updatedAt: Date.now()
     };
 
     const btn = $("#docSaveRx");
@@ -2217,11 +2216,21 @@ async function pharmacistView(page){
   }
 
   if(page==="patients"){
+    // Role gate before reading patient records; Firebase rules must enforce this server-side too.
+    if(!["doctor","pharmacist","admin"].includes(state.profile?.role)){
+      views.innerHTML=`<div class="panel"><div class="chip danger">${esc(t("status_pending"))}</div><p class="muted">Your role is not permitted to view patient records.</p></div>`;return;
+    }
     const [us,rs]=await Promise.all([get(ref(db,dbPath("users"))),get(ref(db,dbPath("prescriptions")))]);
-    const patients=Object.values(us.val()||{}).filter(u=>u.role==="patient");const allRx=rs.val()||{};
+    const rawUsers=us.val()||{}, allRx=rs.val()||{};
+    const patients=Object.entries(rawUsers).map(([key,u])=>u&&typeof u==="object"?{...u,uid:u.uid||key}:null).filter(u=>u&&u.role==="patient");
+    const safeRx=Object.values(allRx).filter(r=>r&&typeof r==="object");
     views.innerHTML=`<div class="notice">${esc(t("profile_readonly"))}</div>
-      <div class="panel"><h2>${esc(t("nav_patients"))} (${patients.length})</h2>${patients.length?`<table><thead><tr><th>${esc(t("name"))}</th><th>${esc(t("patient_unique_id"))}</th><th>${esc(t("age"))}</th><th>${esc(t("weight"))}</th><th>${esc(t("disease"))}</th><th>${esc(t("prescriptions"))}</th><th>${esc(t("active"))}</th><th></th></tr></thead><tbody>${patients.map(u=>{const mine=Object.values(allRx).filter(r=>r.patientUid===u.uid);const active=mine.filter(r=>r.status==="active"&&(!r.expiresAt||r.expiresAt>Date.now()));return `<tr><td>${esc(u.displayName)}</td><td><span class="code">${esc(u.patientId||"—")}</span></td><td>${esc(u.age??"—")}</td><td>${esc(u.weightKg??"—")}</td><td>${esc(u.disease||"—")}</td><td>${mine.length}</td><td>${active.length}</td><td><button class="btn ghost small" data-vp="${esc(u.uid)}">${esc(t("view_rx"))}</button></td></tr>`}).join("")}</tbody></table>`:`<p class="muted">${esc(t("empty_patients"))}</p>`}</div>`;
-    $$("#views [data-vp]").forEach(b=>b.onclick=()=>showPatientRx(b.dataset.vp));
+      <div class="panel"><h2>${esc(t("nav_patients"))} (${patients.length})</h2>
+      <label for="patientSearch">Search patients</label><input id="patientSearch" type="search" placeholder="Search name, patient ID, condition" autocomplete="off" />
+      <div id="patientTableArea">${renderPatientRows(patients,safeRx)}</div></div>`;
+    const search=$("#patientSearch");search.addEventListener("input",()=>{const q=search.value.trim().toLowerCase();const filtered=patients.filter(u=>[u.displayName,u.patientId,u.disease,u.uid].some(v=>String(v??"").toLowerCase().includes(q)));$("#patientTableArea").innerHTML=renderPatientRows(filtered,safeRx);bindPatientRowButtons();});
+    bindPatientRowButtons();
+    function bindPatientRowButtons(){ $$("#patientTableArea [data-vp]").forEach(b=>b.onclick=()=>showPatientRx(b.dataset.vp)); }
     return;
   }
 
@@ -2244,7 +2253,7 @@ async function pharmacistView(page){
       <div class="row"><div class="col"><label>${esc(t("pharmacy_name"))}</label><input id="phName" value="${esc(p.pharmacyName||"")}" /></div><div class="col"><label>${esc(t("pharmacy_location"))}</label><input id="phLoc" value="${esc(p.pharmacyLocation||"")}" /></div></div>
       <div class="row" style="margin-top:10px"><div class="col"><label>${esc(t("display_name"))}</label><input id="phDisp" value="${esc(p.displayName||"")}" /></div><div class="col"><label>${esc(t("email"))}</label><input value="${esc(p.email||"")}" disabled /></div></div>
       <div style="margin-top:12px"><button class="btn" id="savePharm">${esc(t("save"))}</button></div></div>`;
-    $("#savePharm").onclick=async()=>{try{const patch={pharmacyName:$("#phName").value.trim(),pharmacyLocation:$("#phLoc").value.trim(),displayName:$("#phDisp").value.trim(),lastUpdated:formatEventDateTime(Date.now())};await update(ref(db,dbPath(`users/${uid}`)),patch);Object.assign(state.profile,patch);$("#whoName").textContent=patch.displayName||auth.currentUser.email;toast(t("msg_pharmacy_saved"),"ok")}catch(e){toast(e.message,"err")}};
+    $("#savePharm").onclick=async()=>{try{const patch={pharmacyName:$("#phName").value.trim(),pharmacyLocation:$("#phLoc").value.trim(),displayName:$("#phDisp").value.trim()};await update(ref(db,dbPath(`users/${uid}`)),patch);Object.assign(state.profile,patch);$("#whoName").textContent=patch.displayName||auth.currentUser.email;toast(t("msg_pharmacy_saved"),"ok")}catch(e){toast(e.message,"err")}};
     return;
   }
 
@@ -2255,17 +2264,30 @@ async function pharmacistView(page){
   }
 }
 
+function renderPatientRows(patients, allRx){
+  if(!patients.length) return `<p class="muted">${esc(t("empty_patients"))}</p>`;
+  const now=Date.now();
+  return `<div style="overflow-x:auto"><table><thead><tr><th>${esc(t("name"))}</th><th>${esc(t("patient_unique_id"))}</th><th>${esc(t("age"))}</th><th>${esc(t("weight"))}</th><th>${esc(t("disease"))}</th><th>${esc(t("prescriptions"))}</th><th>${esc(t("active"))}</th><th></th></tr></thead><tbody>${patients.map(u=>{
+    const mine=allRx.filter(r=>r.patientUid===u.uid);
+    const active=mine.filter(r=>r.status==="active"&&(!Number.isFinite(Number(r.expiresAt))||Number(r.expiresAt)>now));
+    return `<tr><td>${esc(u.displayName||u.email||"—")}</td><td><span class="code">${esc(u.patientId||"—")}</span></td><td>${esc(u.age??"—")}</td><td>${esc(u.weightKg??"—")}</td><td>${esc(u.disease||"—")}</td><td>${mine.length}</td><td>${active.length}</td><td><button type="button" class="btn ghost small" data-vp="${esc(u.uid)}">${esc(t("view_rx"))}</button></td></tr>`;
+  }).join("")}</tbody></table></div>`;
+}
+
 async function showPatientRx(patientUid){
+  if(!state.user || !["doctor","pharmacist","admin"].includes(state.profile?.role)) return toast("You are not authorized to view patient prescriptions.","err");
+  try {
   const [rs,us]=await Promise.all([get(ref(db,dbPath("prescriptions"))),get(ref(db,dbPath("users")))]);
   const all=rs.val()||{};const patient=(us.val()||{})[patientUid]||{};
-  const mine=Object.entries(all).filter(([id,r])=>r.patientUid===patientUid).sort((a,b)=>(b[1].issuedAt||0)-(a[1].issuedAt||0));
+  const mine=Object.entries(all).filter(([id,r])=>r&&typeof r==="object"&&r.patientUid===patientUid).sort((a,b)=>(Number(b[1].issuedAt)||0)-(Number(a[1].issuedAt)||0));
   const modal=document.createElement("div");modal.className="backdrop";modal.style.zIndex=200;modal.style.display="grid";modal.style.placeItems="center";modal.style.padding="20px";
   modal.innerHTML=`<div class="panel" style="max-width:820px;width:100%;max-height:90vh;overflow:auto">
     <div style="display:flex;justify-content:space-between;gap:10px;align-items:flex-start"><div><h2>${esc(patient.displayName||"Patient")}</h2><p class="sub">ID: ${esc(patient.patientId||"—")} · ${esc(t("age"))}: ${esc(patient.age??"—")} · ${esc(t("weight"))}: ${esc(patient.weightKg??"—")}</p></div><button class="btn ghost small" data-close>✕</button></div>
-    ${mine.length?`<table><thead><tr><th>${esc(t("rx_id"))}</th><th>${esc(t("source"))}</th><th>${esc(t("status"))}</th><th>${esc(t("issued"))}</th><th>${esc(t("expires"))}</th><th>${esc(t("medicines"))}</th><th></th></tr></thead><tbody>${mine.map(([id,r])=>{const meds=Object.values(r.medicines||{}).map(m=>`${esc(m.name)} (${esc(timingLabel(m))})`).join("<br>")||"—";const src=r.source==="doctor"?`<span class="chip warn">${esc(t("source_doctor"))}</span>`:(r.source==="patient"?`<span class="chip warn">${esc(t("source_self"))}</span>`:`<span class="chip info">${esc(t("source_pharm"))}</span>`);return `<tr><td><span class="code">${esc(id)}</span></td><td>${src}</td><td><span class="chip ${r.status==="active"?"ok":(r.status==="pending_dispense"?"warn":(r.status==="revoked"?"danger":"info"))}">${esc(t("status_"+r.status))}</span></td><td>${fmtDay(r.issuedAt)}</td><td>${fmtDay(r.expiresAt)}</td><td>${meds}</td><td><button class="btn ghost small" data-rx="${esc(id)}">${esc(t("view"))}</button></td></tr>`}).join("")}</tbody></table>`:`<p class="muted">${esc(t("empty_prescriptions"))}</p>`}
+    ${mine.length?`<table><thead><tr><th>${esc(t("rx_id"))}</th><th>${esc(t("source"))}</th><th>${esc(t("status"))}</th><th>${esc(t("issued"))}</th><th>${esc(t("expires"))}</th><th>${esc(t("medicines"))}</th><th></th></tr></thead><tbody>${mine.map(([id,r])=>{const meds=Object.values(r.medicines||{}).filter(m=>m&&typeof m==="object").map(m=>`${esc(m.name||"—")} (${esc(timingLabel(m))})`).join("<br>")||"—";const src=r.source==="doctor"?`<span class="chip warn">${esc(t("source_doctor"))}</span>`:(r.source==="patient"?`<span class="chip warn">${esc(t("source_self"))}</span>`:`<span class="chip info">${esc(t("source_pharm"))}</span>`);return `<tr><td><span class="code">${esc(id)}</span></td><td>${src}</td><td><span class="chip ${r.status==="active"?"ok":(r.status==="pending_dispense"?"warn":(r.status==="revoked"?"danger":"info"))}">${esc(t("status_"+r.status))}</span></td><td>${fmtDay(r.issuedAt)}</td><td>${fmtDay(r.expiresAt)}</td><td>${meds}</td><td><button class="btn ghost small" data-rx="${esc(id)}">${esc(t("view"))}</button></td></tr>`}).join("")}</tbody></table>`:`<p class="muted">${esc(t("empty_prescriptions"))}</p>`}
   </div>`;
   document.body.appendChild(modal);modal.querySelector("[data-close]").onclick=()=>modal.remove();modal.onclick=e=>{if(e.target===modal)modal.remove()};
-  modal.querySelectorAll("[data-rx]").forEach(b=>b.onclick=()=>showRxDetails(b.dataset.rx,"pharmacist"));
+  modal.querySelectorAll("[data-rx]").forEach(b=>b.onclick=()=>showRxDetails(b.dataset.rx,state.profile?.role||"doctor"));
+  } catch(err){ console.error("Patient prescriptions load failed",err); toast("Could not load prescriptions. Check your access and connection, then try again.","err",6000); }
 }
 
 async function dispense(rxId,expired,revoked,consentOk){
@@ -2273,17 +2295,16 @@ async function dispense(rxId,expired,revoked,consentOk){
   if(!confirm(t("msg_confirm_dispense")))return;
   try{
     const markerRef=ref(db,dbPath(`dispensingEvents/${rxId}/_single_use`));
-    const result=await runTransaction(markerRef,cur=>cur===null?{createdAt:Date.now(),createdAtStr:formatEventDateTime(Date.now()),pharmacistUid:auth.currentUser.uid}:undefined);
+    const result=await runTransaction(markerRef,cur=>cur===null?{createdAt:Date.now(),pharmacistUid:auth.currentUser.uid}:undefined);
     if(!result.committed)return toast(t("msg_already_dispensed"),"err");
     const evId=newId("EVT");const pp=state.profile||{};
-    await set(ref(db,dbPath(`dispensingEvents/${rxId}/${evId}`)),{id:evId,pharmacistUid:auth.currentUser.uid,pharmacistName:pp.displayName||"",pharmacyName:pp.pharmacyName||"",pharmacyLocation:pp.pharmacyLocation||"",status:"demo_recorded",createdAt:Date.now(),createdAtStr:formatEventDateTime(Date.now())});
+    await set(ref(db,dbPath(`dispensingEvents/${rxId}/${evId}`)),{id:evId,pharmacistUid:auth.currentUser.uid,pharmacistName:pp.displayName||"",pharmacyName:pp.pharmacyName||"",pharmacyLocation:pp.pharmacyLocation||"",status:"demo_recorded",createdAt:Date.now()});
     
     // Update prescription to active
     await update(ref(db,dbPath(`prescriptions/${rxId}`)),{
       status: "active",
       dispensedByUid:auth.currentUser.uid,
       dispensedAt:Date.now(),
-      dispensedAtStr:formatEventDateTime(Date.now()),
       dispensedByName:pp.displayName||"",
       dispensedByPharmacy:pp.pharmacyName||"",
       dispensedByLocation:pp.pharmacyLocation||""
@@ -2362,36 +2383,83 @@ async function decideRequest(rid,decision){try{const snap=await get(ref(db,dbPat
 async function setStatus(uid,status){if(!confirm(`Set → ${status}?`))return;try{await update(ref(db,dbPath(`users/${uid}`)),{status});await logAudit("user_status_changed",uid,{status});goTo("admin","users")}catch(e){toast(e.message,"err")}}
 
 async function seedDemoData(){
-  if(!confirm(t("msg_confirm_seed")))return;
-  try{
-    const now=Date.now();const DAY=24*3600e3;
-    const demoPatients=[
-      {uid:"demo_patient_1",displayName:"Demo Alice",email:"alice@demo.local",age:34,weightKg:62,disease:"throat infection",patientId:"PAT_DEMO1"},
-      {uid:"demo_patient_2",displayName:"Demo Bob",email:"bob@demo.local",age:52,weightKg:80,disease:"urinary infection",patientId:"PAT_DEMO2"},
-      {uid:"demo_patient_3",displayName:"Demo Carla",email:"carla@demo.local",age:27,weightKg:55,disease:"skin infection",patientId:"PAT_DEMO3"}
-    ];
-    for(const p of demoPatients){await set(ref(db,dbPath(`users/${p.uid}`)),{uid:p.uid,displayName:p.displayName,email:p.email,role:"patient",status:"active",createdAt:now,createdAtStr:formatEventDateTime(now),autoConsentToPharmacists:true,demo:true,age:p.age,weightKg:p.weightKg,disease:p.disease,patientId:p.patientId});await set(ref(db,dbPath(`patientIds/${p.patientId}`)),p.uid)}
-    const dp={uid:"demo_pharm_1",displayName:"Demo Pharmacist",email:"pharm@demo.local",role:"pharmacist",status:"active",pharmacyName:"Demo Pharmacy Central",pharmacyLocation:"Demo City",createdAt:now,createdAtStr:formatEventDateTime(now),demo:true};
-    await set(ref(db,dbPath(`users/${dp.uid}`)),dp);
-    const dd={uid:"demo_doc_1",displayName:"Demo Doctor",email:"doc@demo.local",role:"doctor",status:"active",createdAt:now,createdAtStr:formatEventDateTime(now),demo:true};
-    await set(ref(db,dbPath(`users/${dd.uid}`)),dd);
-    
-    const med=(name,dose,freq,dur,qty,exp,m,a,e)=>({name,dosage:dose,frequency:freq,duration:dur,quantity:qty,expiry:exp,morning:m,afternoon:a,evening:e,notes:""});
-    const demoRx=[
-      {id:"RX_DEMO0001",patientUid:"demo_patient_1",createdByUid:auth.currentUser.uid,status:"active",issuedAt:now-2*DAY,issuedAtStr:formatEventDateTime(now-2*DAY),expiresAt:now+5*DAY,expiresAtStr:formatEventDateTime(now+5*DAY),medicines:{m1:med("Demo-Amoxicillin","500 mg","TID","5 days","15",now+5*DAY,true,true,true),m2:med("Demo-Azithromycin","250 mg","OD","3 days","3",now+3*DAY,false,false,true)},instructions:"Take with food.",createdAt:now-2*DAY,createdAtStr:formatEventDateTime(now-2*DAY),updatedAt:now-2*DAY,updatedAtStr:formatEventDateTime(now-2*DAY)},
-      {id:"RX_DEMO0002",patientUid:"demo_patient_2",createdByUid:auth.currentUser.uid,status:"active",issuedAt:now-1*DAY,issuedAtStr:formatEventDateTime(now-1*DAY),expiresAt:now+6*DAY,expiresAtStr:formatEventDateTime(now+6*DAY),medicines:{m1:med("Demo-Ciprofloxacin","500 mg","BID","7 days","14",now+6*DAY,true,false,true)},instructions:"",createdAt:now-1*DAY,createdAtStr:formatEventDateTime(now-1*DAY),updatedAt:now-1*DAY,updatedAtStr:formatEventDateTime(now-1*DAY)},
-      {id:"RX_DEMO0003",patientUid:"demo_patient_3",createdByUid:auth.currentUser.uid,status:"pending_dispense",issuedAt:now,issuedAtStr:formatEventDateTime(now),expiresAt:now+7*DAY,expiresAtStr:formatEventDateTime(now+7*DAY),medicines:{m1:med("Demo-Doxycycline","100 mg","BID","7 days","14",now+7*DAY,true,false,true)},instructions:"Avoid dairy.",createdAt:now,createdAtStr:formatEventDateTime(now),updatedAt:now,updatedAtStr:formatEventDateTime(now)}
-    ];
-    for(const rx of demoRx)await set(ref(db,dbPath(`prescriptions/${rx.id}`)),rx);
-    const evId=newId("EVT");
-    await set(ref(db,dbPath(`dispensingEvents/RX_DEMO0002/_single_use`)),{createdAt:now,createdAtStr:formatEventDateTime(now),pharmacistUid:dp.uid});
-    await set(ref(db,dbPath(`dispensingEvents/RX_DEMO0002/${evId}`)),{id:evId,pharmacistUid:dp.uid,pharmacistName:dp.displayName,pharmacyName:dp.pharmacyName,pharmacyLocation:dp.pharmacyLocation,status:"demo_recorded",createdAt:now,createdAtStr:formatEventDateTime(now)});
-    await update(ref(db,dbPath(`prescriptions/RX_DEMO0002`)),{dispensedByUid:dp.uid,dispensedAt:now,dispensedAtStr:formatEventDateTime(now),dispensedByName:dp.displayName,dispensedByPharmacy:dp.pharmacyName,dispensedByLocation:dp.pharmacyLocation});
-    await logAudit("seed_demo_data",null);toast(t("msg_seeded"),"ok",5000);goTo("admin","dash");
-  }catch(e){toast("Seed failed: "+e.message,"err",6000)}
+  // Deliberately never write sample/demo patient records to Firebase.
+  openDemoWorkspace();
+  toast("Demo records are local-only. Use Reset Demo to restore the sample session.","ok",5000);
 }
 
+/* ================= Isolated Local Demo Mode =================
+   All demo state is in memory only. This module does not call Firebase,
+   authentication APIs, or external services for sample data.
+*/
+const DEMO_TRANSLATIONS = {
+  en:{launch:"Explore full Demo Mode",persistent:"DEMO MODE – SAMPLE DATA ONLY",local:"All changes are temporary and kept in memory on this device. No sample records are sent to Firebase.",heading:"AMR GUARD · Interactive safety lab",intro:"Explore account flows, medicine search, safety alerts, opened-medicine expiry tracking, dashboards and resistance education using fictional examples only.",guest:"Guest demo",dash:"Demo dashboard",users:"Sample accounts",alerts:"Safety scenarios",expiry:"Expiry examples",amr:"AMR education alert",accounts:"Account & profile demo",medicine:"Medicine search",safety:"Safety scenarios",tracker:"Expiry tracker",reports:"Reports & alerts",panel:"Medicine safety scenarios",hint:"Select a sample scenario. Outcomes are educational demonstrations, not clinical determinations.",searchTitle:"Medicine information search",searchLabel:"Search a medicine or topic",searchPlaceholder:"e.g. paracetamol, amoxicillin, AMR",search:"Search catalogue",clear:"Clear",reportTitle:"Sample reports & notifications",footer:"Clinical safety: this demo does not diagnose, prescribe, or certify a dose as safe. For a suspected overdose, seek urgent professional or poison-control advice; do not wait for this app and do not induce vomiting. Translations of clinical safety text require qualified medical review.",reset:"Reset Demo",exit:"Exit Demo",choose:"Choose a scenario",scenarioOver:"Possible overdose — urgent assessment",scenarioMissing:"Dose cannot be verified — missing information",scenarioDuplicate:"Duplicate active ingredient across products",scenarioSoon:"Dose timing may be too soon",scenarioExpiry:"Medicine approaching printed expiry",scenarioSyrup:"Opened syrup past permitted after-opening period",scenarioStorage:"Storage / after-opening instructions unclear",scenarioAmr:"Antimicrobial resistance education alert",patient:"Fictional patient",weight:"Weight",medicineName:"Medicine",strength:"Strength",formulation:"Formulation",amount:"Amount per dose",lastDose:"Time of previous dose",total:"Total amount taken / last 24 hours",run:"Run demo check",warning:"SAFETY DEMO: A 650 mg paracetamol tablet has been entered for a fictional 8-year-old child weighing 30 kg. Do not treat this example as a dosing recommendation. Verify the product, formulation, prescribed dose, timing, and total amount taken with a qualified healthcare professional before administration.",unverified:"VERIFICATION REQUIRED — this example is not enough to decide whether a dose is appropriate. A 650 mg tablet is not being recommended for this child. Check the exact product, formulation, prescribed dose, timing, other medicines, and total amount taken with a qualified healthcare professional.",possible:"SIMULATED URGENT SCENARIO — if an excessive amount may already have been taken, seek urgent medical or poison-control advice now. Do not wait for app calculations and do not induce vomiting. This is not a clinical determination.",duplicateText:"SIMULATED DUPLICATE-INGREDIENT ALERT — two example products may contain paracetamol. Check each product’s active ingredients and total amount with a pharmacist or clinician before taking them together.",soonText:"SIMULATED TIMING ALERT — the example says the previous dose was recent, but the app has no validated product-specific interval rule here. Do not repeat a dose until the label or a qualified healthcare professional confirms the timing.",expiryText:"SIMULATED expiry reminder — this sample product is close to its printed expiry date. Check the actual package and do not use a product beyond its labelled expiry.",syrupText:"SIMULATED opened-syrup alert — the sample’s entered after-opening use-by date has passed. Do not use it; check the product leaflet and ask a pharmacist. The app does not assume a universal after-opening period.",storageText:"VERIFICATION REQUIRED — storage and after-opening instructions are missing or unclear. Check the manufacturer’s leaflet/label or ask a pharmacist; this app cannot infer a safe period.",amrText:"EDUCATION ALERT — unnecessary or incorrectly used antibiotics can contribute to antimicrobial resistance. Antibiotics do not treat viral infections; use antibiotics only when prescribed and follow the prescriber’s instructions. Do not start, stop, or share antibiotics based on this demo.",next:"Recommended next step",reason:"Reason for warning",level:"Warning level",inputs:"Sample inputs",review:"Clinical rule/source review",simulated:"SIMULATED DEMO OUTCOME — not a validated clinical rule",name:"Name",email:"Email",role:"Role",create:"Simulate account creation",login:"Simulate login",profile:"Save sample profile",sampleAccounts:"Fictional sample accounts",profileName:"Display name",age:"Age (years)",searchEmpty:"No matching sample catalogue entry. Try paracetamol, amoxicillin, antibiotic resistance, or syrup.",resetDone:"Demo reset. All temporary demo changes cleared.",created:"Sample account created locally only. No real account was created.",logged:"Sample login successful in this local simulation only.",saved:"Sample profile updated in memory only.",savedExpiry:"Expiry example added to this temporary demo session.",searchFound:"Sample catalogue result",noRule:"No validated clinical rule is configured for this scenario. The system cannot verify a dose.",expiryForm:"Try the expiry tracker",opened:"Opened date",useBy:"After-opening use-by date",packExpiry:"Printed package expiry",addExpiry:"Add sample medicine",amrCount:"Resistance education",noExternal:"No external service is contacted by this demo.",chartTitle:"Sample alert activity (illustrative only)",chartDose:"Dose verification",chartUrgent:"Urgent scenario",chartExpiry:"Expiry reminders",chartAmr:"AMR education"},
+  te:{launch:"పూర్తి డెమోను చూడండి",persistent:"డెమో మోడ్ – నమూనా డేటా మాత్రమే",local:"మార్పులు ఈ పరికరంలో తాత్కాలికంగా మాత్రమే ఉంటాయి. నమూనా రికార్డులు Firebase‌కు పంపబడవు.",heading:"AMR GUARD · ఇంటరాక్టివ్ భద్రతా ప్రయోగశాల",intro:"కల్పిత ఉదాహరణలతో ఖాతా, మందుల శోధన, భద్రతా హెచ్చరికలు, తెరిచిన మందుల గడువు, నివేదికలు మరియు యాంటీమైక్రోబియల్ రెసిస్టెన్స్ విద్యను పరీక్షించండి.",guest:"అతిథి డెమో",dash:"డెమో డాష్‌బోర్డ్",users:"నమూనా ఖాతాలు",alerts:"భద్రతా సందర్భాలు",expiry:"గడువు ఉదాహరణలు",amr:"AMR విద్యా హెచ్చరిక",accounts:"ఖాతా మరియు ప్రొఫైల్ డెమో",medicine:"మందుల శోధన",safety:"భద్రతా సందర్భాలు",tracker:"గడువు ట్రాకర్",reports:"నివేదికలు మరియు హెచ్చరికలు",panel:"మందుల భద్రతా సందర్భాలు",hint:"ఒక నమూనా సందర్భాన్ని ఎంచుకోండి. ఫలితాలు విద్యాపరమైనవి మాత్రమే; వైద్య నిర్ణయాలు కావు.",searchTitle:"మందుల సమాచారం శోధన",searchLabel:"మందు లేదా అంశాన్ని శోధించండి",searchPlaceholder:"ఉదా: పారాసిటమాల్, అమోక్సిసిలిన్, AMR",search:"కాటలాగ్‌లో శోధించండి",clear:"తొలగించు",reportTitle:"నమూనా నివేదికలు మరియు నోటిఫికేషన్లు",reset:"డెమో రీసెట్",exit:"డెమో నుంచి బయటకు",choose:"ఒక సందర్భాన్ని ఎంచుకోండి",scenarioOver:"సాధ్యమైన అధిక మోతాదు — అత్యవసర అంచనా",scenarioMissing:"మోతాదును ధృవీకరించలేము — సమాచారం లేదు",scenarioDuplicate:"రెండు మందుల్లో ఒకే క్రియాశీల పదార్థం",scenarioSoon:"మునుపటి మోతాదు తర్వాత సమయం తక్కువగా ఉండవచ్చు",scenarioExpiry:"ముద్రించిన గడువు తేదీ సమీపంలో ఉంది",scenarioSyrup:"తెరిచిన సిరప్ అనుమతించిన వినియోగ కాలం దాటింది",scenarioStorage:"నిల్వ / తెరిచిన తర్వాత సూచనలు స్పష్టంగా లేవు",scenarioAmr:"యాంటీమైక్రోబియల్ రెసిస్టెన్స్ విద్యా హెచ్చరిక",patient:"కల్పిత రోగి",weight:"బరువు",medicineName:"మందు",strength:"బలం",formulation:"రూపం",amount:"ప్రతి మోతాదులో పరిమాణం",lastDose:"మునుపటి మోతాదు సమయం",total:"మొత్తం తీసుకున్న పరిమాణం / గత 24 గంటలు",run:"డెమో తనిఖీ చేయండి",possible:"అనుకరణ అత్యవసర సందర్భం — అధిక పరిమాణం ఇప్పటికే తీసుకుని ఉండవచ్చని అనిపిస్తే వెంటనే వైద్య లేదా విష నియంత్రణ సలహా పొందండి. యాప్ లెక్కల కోసం వేచి ఉండవద్దు; వాంతి చేయించవద్దు.",warning:"భద్రతా డెమో: 30 కిలోల బరువున్న కల్పిత 8 ఏళ్ల బాలుడికి 650 mg పారాసిటమాల్ మాత్రను నమోదు చేశారు. దీన్ని మోతాదు సిఫార్సుగా భావించవద్దు. ఇవ్వడానికి ముందు ఉత్పత్తి, రూపం, వైద్యుడు సూచించిన మోతాదు, సమయం మరియు మొత్తం తీసుకున్న పరిమాణాన్ని అర్హత కలిగిన ఆరోగ్య నిపుణుడితో ధృవీకరించండి.",unverified:"ధృవీకరణ అవసరం — మోతాదు సరైనదో నిర్ణయించడానికి ఈ సమాచారం సరిపోదు. ఈ బాలుడికి 650 mg మాత్రను సిఫార్సు చేయడం లేదు. ఆరోగ్య నిపుణుడితో ధృవీకరించండి.",possible:"అనుకరణ అత్యవసర సందర్భం — అధిక పరిమాణం ఇప్పటికే తీసుకుని ఉండవచ్చని అనిపిస్తే వెంటనే వైద్య లేదా విష నియంత్రణ సలహా పొందండి. యాప్ లెక్కల కోసం వేచి ఉండవద్దు; వాంతి చేయించవద్దు.",duplicateText:"అనుకరణ హెచ్చరిక — రెండు ఉత్పత్తుల్లో పారాసిటమాల్ ఉండవచ్చు. కలిపి తీసుకునే ముందు క్రియాశీల పదార్థాలు మరియు మొత్తం పరిమాణాన్ని ఆరోగ్య నిపుణుడితో తనిఖీ చేయండి.",soonText:"అనుకరణ సమయ హెచ్చరిక — ఉత్పత్తికి సంబంధించిన ధృవీకరించిన సమయ నియమం లేదు. లేబుల్ లేదా ఆరోగ్య నిపుణుడు నిర్ధారించే వరకు మళ్లీ మోతాదు తీసుకోవద్దు.",expiryText:"అనుకరణ గడువు గుర్తు — నమూనా మందు ముద్రించిన గడువు తేదీకి దగ్గరగా ఉంది. ప్యాకెట్‌ను తనిఖీ చేయండి; గడువు దాటిన మందును వాడవద్దు.",syrupText:"అనుకరణ సిరప్ హెచ్చరిక — నమోదు చేసిన తెరిచిన తర్వాత వినియోగ తేదీ దాటింది. వాడవద్దు; లీఫ్‌లెట్ చూడండి లేదా ఫార్మసిస్ట్‌ను అడగండి. అందరికీ ఒకే కాలాన్ని యాప్ ఊహించదు.",storageText:"ధృవీకరణ అవసరం — నిల్వ లేదా తెరిచిన తర్వాత సూచనలు లేవు/స్పష్టంగా లేవు. తయారీదారు సూచనలు చూడండి లేదా ఫార్మసిస్ట్‌ను అడగండి.",amrText:"విద్యా హెచ్చరిక — అవసరం లేకుండా లేదా తప్పుగా యాంటీబయాటిక్స్ వాడటం యాంటీమైక్రోబియల్ రెసిస్టెన్స్‌కు దోహదం చేయవచ్చు. వైరస్‌లకు యాంటీబయాటిక్స్ పనిచేయవు. ఈ డెమో ఆధారంగా యాంటీబయాటిక్స్ ప్రారంభించవద్దు, ఆపవద్దు లేదా పంచుకోవద్దు.",next:"తదుపరి చర్య",reason:"హెచ్చరిక కారణం",level:"హెచ్చరిక స్థాయి",inputs:"నమూనా వివరాలు",review:"వైద్య నియమం / మూల సమీక్ష",simulated:"అనుకరణ డెమో ఫలితం — ధృవీకరించిన వైద్య నియమం కాదు",name:"పేరు",email:"ఇమెయిల్",role:"పాత్ర",create:"ఖాతా సృష్టిని అనుకరించండి",login:"లాగిన్‌ను అనుకరించండి",profile:"నమూనా ప్రొఫైల్ సేవ్ చేయండి",sampleAccounts:"కల్పిత నమూనా ఖాతాలు",profileName:"పేరు",age:"వయస్సు (సంవత్సరాలు)",searchEmpty:"సరిపోలిన నమూనా లేదు. పారాసిటమాల్, అమోక్సిసిలిన్, AMR లేదా సిరప్ ప్రయత్నించండి.",resetDone:"డెమో రీసెట్ అయింది. తాత్కాలిక మార్పులు తొలగించబడ్డాయి.",created:"ఖాతా స్థానికంగా మాత్రమే అనుకరించబడింది. నిజమైన ఖాతా సృష్టించలేదు.",logged:"స్థానిక డెమోలో లాగిన్ అనుకరణ విజయవంతమైంది.",saved:"నమూనా ప్రొఫైల్ తాత్కాలిక మెమరీలో నవీకరించబడింది.",savedExpiry:"గడువు ఉదాహరణ ఈ తాత్కాలిక డెమోలో చేర్చబడింది.",searchFound:"నమూనా కాటలాగ్ ఫలితం",noRule:"ఈ సందర్భానికి ధృవీకరించిన వైద్య నియమం లేదు. మోతాదును ధృవీకరించలేము.",expiryForm:"గడువు ట్రాకర్ ప్రయత్నించండి",opened:"తెరిచిన తేదీ",useBy:"తెరిచిన తర్వాత వినియోగ తేదీ",packExpiry:"ప్యాకెట్ గడువు తేదీ",addExpiry:"నమూనా మందు జోడించండి",amrCount:"రెసిస్టెన్స్ విద్య",noExternal:"ఈ డెమో బాహ్య సేవను సంప్రదించదు.",chartTitle:"నమూనా హెచ్చరికల చార్ట్ (ఉదాహరణ మాత్రమే)",chartDose:"మోతాదు ధృవీకరణ",chartUrgent:"అత్యవసర సందర్భం",chartExpiry:"గడువు గుర్తింపులు",chartAmr:"AMR విద్య"},
+  hi:{launch:"पूरा डेमो देखें",persistent:"डेमो मोड – केवल नमूना डेटा",local:"बदलाव केवल इस डिवाइस की अस्थायी मेमोरी में हैं। नमूना रिकॉर्ड Firebase को नहीं भेजे जाते।",heading:"AMR GUARD · इंटरैक्टिव सुरक्षा प्रयोगशाला",intro:"केवल काल्पनिक उदाहरणों से खाते, दवा खोज, सुरक्षा चेतावनी, खुली दवा की उपयोग-अवधि, रिपोर्ट और AMR शिक्षा देखें।",guest:"अतिथि डेमो",dash:"डेमो डैशबोर्ड",users:"नमूना खाते",alerts:"सुरक्षा परिदृश्य",expiry:"समाप्ति उदाहरण",amr:"AMR शिक्षा चेतावनी",accounts:"खाता और प्रोफ़ाइल डेमो",medicine:"दवा खोज",safety:"सुरक्षा परिदृश्य",tracker:"समाप्ति ट्रैकर",reports:"रिपोर्ट और चेतावनी",panel:"दवा सुरक्षा परिदृश्य",hint:"एक नमूना परिदृश्य चुनें। परिणाम शैक्षिक उदाहरण हैं, चिकित्सकीय निर्णय नहीं।",searchTitle:"दवा जानकारी खोज",searchLabel:"दवा या विषय खोजें",searchPlaceholder:"जैसे paracetamol, amoxicillin, AMR",search:"कैटलॉग खोजें",clear:"साफ़ करें",reportTitle:"नमूना रिपोर्ट और सूचनाएँ",reset:"डेमो रीसेट",exit:"डेमो से बाहर निकलें",choose:"परिदृश्य चुनें",scenarioOver:"संभावित ओवरडोज़ — तत्काल आकलन",scenarioMissing:"खुराक सत्यापित नहीं — जानकारी अधूरी",scenarioDuplicate:"दो उत्पादों में समान सक्रिय घटक",scenarioSoon:"पिछली खुराक के बाद समय कम हो सकता है",scenarioExpiry:"मुद्रित समाप्ति तिथि निकट है",scenarioSyrup:"खोली गई सिरप की अनुमत अवधि समाप्त",scenarioStorage:"भंडारण/खोलने के बाद निर्देश अस्पष्ट",scenarioAmr:"AMR शिक्षा चेतावनी",patient:"काल्पनिक रोगी",weight:"वज़न",medicineName:"दवा",strength:"ताकत",formulation:"रूप",amount:"प्रति खुराक मात्रा",lastDose:"पिछली खुराक का समय",total:"कुल मात्रा / पिछले 24 घंटे",run:"डेमो जाँच चलाएँ",possible:"काल्पनिक तत्काल स्थिति — यदि अधिक मात्रा ली गई हो सकती है, तो तुरंत चिकित्सा या विष-नियंत्रण सलाह लें। ऐप की गणना का इंतज़ार न करें और उल्टी न कराएँ।",warning:"सुरक्षा डेमो: 30 किलोग्राम वज़न वाले काल्पनिक 8-वर्षीय बच्चे के लिए 650 mg पैरासिटामोल टैबलेट दर्ज की गई है। इसे खुराक की सिफारिश न मानें। देने से पहले उत्पाद, रूप, निर्धारित खुराक, समय और कुल ली गई मात्रा की योग्य स्वास्थ्य पेशेवर से पुष्टि करें।",unverified:"पुष्टि आवश्यक — यह जानकारी खुराक की उपयुक्तता तय करने के लिए पर्याप्त नहीं है। इस बच्चे के लिए 650 mg टैबलेट की सिफारिश नहीं की जा रही है। योग्य स्वास्थ्य पेशेवर से पुष्टि करें।",possible:"काल्पनिक तत्काल स्थिति — यदि अधिक मात्रा ली गई हो सकती है, तो तुरंत चिकित्सा या विष-नियंत्रण सलाह लें। ऐप की गणना का इंतज़ार न करें और उल्टी न कराएँ।",duplicateText:"काल्पनिक दोहराव चेतावनी — दोनों उत्पादों में पैरासिटामोल हो सकता है। साथ लेने से पहले सक्रिय घटक और कुल मात्रा की जाँच स्वास्थ्य पेशेवर से कराएँ।",soonText:"काल्पनिक समय चेतावनी — यहाँ उत्पाद-विशिष्ट सत्यापित समय नियम उपलब्ध नहीं है। लेबल या स्वास्थ्य पेशेवर की पुष्टि तक अगली खुराक न लें।",expiryText:"काल्पनिक समाप्ति अनुस्मारक — नमूना दवा की मुद्रित समाप्ति तिथि निकट है। पैकेज जाँचें और समाप्त दवा का उपयोग न करें।",syrupText:"काल्पनिक सिरप चेतावनी — दर्ज की गई खोलने के बाद की उपयोग-तिथि बीत चुकी है। उपयोग न करें; पत्रक देखें या फार्मासिस्ट से पूछें। ऐप कोई सार्वभौमिक अवधि नहीं मानता।",storageText:"पुष्टि आवश्यक — भंडारण या खोलने के बाद के निर्देश उपलब्ध/स्पष्ट नहीं हैं। निर्माता का लेबल देखें या फार्मासिस्ट से पूछें।",amrText:"शिक्षा चेतावनी — अनावश्यक या गलत एंटीबायोटिक उपयोग AMR बढ़ा सकता है। एंटीबायोटिक वायरल संक्रमण का इलाज नहीं करते। इस डेमो के आधार पर एंटीबायोटिक शुरू, बंद या साझा न करें।",next:"अगला कदम",reason:"चेतावनी का कारण",level:"चेतावनी स्तर",inputs:"नमूना इनपुट",review:"चिकित्सकीय नियम/स्रोत समीक्षा",simulated:"काल्पनिक डेमो परिणाम — सत्यापित चिकित्सकीय नियम नहीं",name:"नाम",email:"ईमेल",role:"भूमिका",create:"खाता निर्माण का अनुकरण",login:"लॉगिन का अनुकरण",profile:"नमूना प्रोफ़ाइल सहेजें",sampleAccounts:"काल्पनिक नमूना खाते",profileName:"प्रदर्शित नाम",age:"आयु (वर्ष)",searchEmpty:"कोई मेल नहीं मिला। paracetamol, amoxicillin, AMR या syrup खोजें।",resetDone:"डेमो रीसेट हुआ। अस्थायी बदलाव साफ़ कर दिए गए।",created:"खाता केवल स्थानीय रूप से अनुकरण किया गया। वास्तविक खाता नहीं बना।",logged:"स्थानीय डेमो लॉगिन सफल रहा।",saved:"नमूना प्रोफ़ाइल केवल अस्थायी मेमोरी में अपडेट हुई।",savedExpiry:"इस अस्थायी डेमो में समाप्ति उदाहरण जोड़ा गया।",searchFound:"नमूना कैटलॉग परिणाम",noRule:"इस परिदृश्य के लिए सत्यापित चिकित्सकीय नियम उपलब्ध नहीं है। खुराक सत्यापित नहीं की जा सकती।",expiryForm:"समाप्ति ट्रैकर आज़माएँ",opened:"खोलने की तारीख",useBy:"खोलने के बाद उपयोग की तारीख",packExpiry:"पैकेज समाप्ति तिथि",addExpiry:"नमूना दवा जोड़ें",amrCount:"AMR शिक्षा",noExternal:"यह डेमो किसी बाहरी सेवा से संपर्क नहीं करता।",chartTitle:"नमूना चेतावनी गतिविधि (केवल उदाहरण)",chartDose:"खुराक सत्यापन",chartUrgent:"तत्काल परिदृश्य",chartExpiry:"समाप्ति अनुस्मारक",chartAmr:"AMR शिक्षा"}
+};
+const DEMO_BASE = {
+  accounts:[{name:"Demo Patient",email:"patient@example.demo",role:"Patient",id:"PAT-DEMO-1042"},{name:"Demo Doctor",email:"doctor@example.demo",role:"Doctor",id:"DOC-DEMO-2071"},{name:"Demo Pharmacist",email:"pharmacy@example.demo",role:"Pharmacist",id:"PHARM-DEMO-3008"}],
+  opened:[{name:"Sample cough syrup",opened:daysAgo(12),useBy:daysAgo(2),expiry:daysFrom(180),instruction:"Example date only; product label must decide actual period."},{name:"Sample eye drops",opened:daysAgo(5),useBy:daysFrom(20),expiry:daysFrom(80),instruction:"Example dates only."}],
+  actions:[],profile:{name:"Demo Patient",age:8,weight:30,email:"patient@example.demo"},activeScenario:"child650",createdCount:0,searchTerm:""
+};
+let demoState = cloneDemoBase();
+function daysAgo(n){return new Date(Date.now()-n*86400000).toISOString().slice(0,10)}
+function daysFrom(n){return new Date(Date.now()+n*86400000).toISOString().slice(0,10)}
+function cloneDemoBase(){return {accounts:DEMO_BASE?.accounts?DEMO_BASE.accounts.map(x=>({...x})):[],opened:DEMO_BASE?.opened?DEMO_BASE.opened.map(x=>({...x})):[],actions:[],profile:{name:"Demo Patient",age:8,weight:30,email:"patient@example.demo"},activeScenario:"child650",createdCount:0,searchTerm:""}}
+function dt(k){const lang=document.getElementById("demoLang")?.value||state.lang||"en";const translated=DEMO_TRANSLATIONS[lang]&&DEMO_TRANSLATIONS[lang][k];if(translated)return translated;const english=DEMO_TRANSLATIONS.en[k]||k;return lang==="en"?english:`[Translation unavailable for ${lang}; English text shown for review] ${english}`}
+function openDemoWorkspace(){demoState=cloneDemoBase();$("#authScreen").classList.add("hidden");$("#kioskAuthScreen").classList.add("hidden");$("#appShell").classList.add("hidden");$("#demoWorkspace").classList.remove("hidden");$("#demoLang").value=state.lang||"en";renderDemoAll();window.scrollTo({top:0,behavior:"smooth"})}
+function exitDemoWorkspace(){$("#demoWorkspace").classList.add("hidden");if(state.user&&state.profile){$("#appShell").classList.remove("hidden");$("#authScreen").classList.add("hidden")}else{$("#authScreen").classList.remove("hidden")}applyLang();}
+function resetDemo(){demoState=cloneDemoBase();renderDemoAll();toast(dt("resetDone"),"ok")}
+function renderDemoAll(){
+ const lang=$("#demoLang").value||"en";document.documentElement.lang=lang;document.documentElement.dir=lang==="ur"?"rtl":"ltr";$("#demoWorkspace").dir=lang==="ur"?"rtl":"ltr";
+ const map={demoLaunchText:"launch",demoPersistentLabel:"persistent",demoLocalNotice:"local",demoHeading:"heading",demoIntro:"intro",demoUserPill:"guest",demoDashTitle:"dash",demoKpiUsersLabel:"users",demoKpiAlertsLabel:"alerts",demoKpiExpiryLabel:"expiry",demoKpiAmrLabel:"amr",demoAccountsBtn:"accounts",demoMedicineBtn:"medicine",demoSafetyBtn:"safety",demoExpiryBtn:"tracker",demoReportsBtn:"reports",demoPanelTitle:"panel",demoPanelHint:"hint",demoSearchTitle:"searchTitle",demoSearchLabel:"searchLabel",demoSearchBtn:"search",demoClearSearchBtn:"clear",demoReportsTitle:"reportTitle",demoMedicalFooter:"footer",resetDemoBtn:"reset",exitDemoBtn:"exit"};
+ Object.entries(map).forEach(([id,k])=>{const el=$("#"+id);if(el)el.textContent=dt(k)});$("#demoMedicineSearch").placeholder=dt("searchPlaceholder");$("#demoKpiUsers").textContent=demoState.accounts.length+demoState.createdCount;$("#demoKpiAlerts").textContent="8";$("#demoKpiExpiry").textContent=demoState.opened.length;$("#demoKpiAmr").textContent="1";
+ renderDemoScenarioPanel();renderDemoReports();renderDemoTranslationAudit();if(demoState.searchTerm)runDemoSearch();
+}
+const DEMO_SCENARIOS=[
+ {id:"child650",title:"Paracetamol 650 mg · child verification",level:"warning",bodyKey:"unverified",reason:"Age, weight, formulation, prescription, dose timing, other medicines and total amount must be reviewed. No validated dosing recommendation is calculated here.",next:"Do not administer based on this demo. Verify the exact product and prescribed instructions with a qualified healthcare professional.",inputs:"Fictional boy · age 8 years · weight 30 kg · paracetamol tablet 650 mg"},
+ {id:"overdose",title:"Possible overdose requiring urgent assessment",level:"critical",bodyKey:"possible",reason:"The scenario is intentionally simulated; the demo does not calculate a real overdose threshold or diagnosis.",next:"Seek urgent medical or poison-control advice now if an excessive amount may have been taken. Do not wait for app calculations; do not induce vomiting.",inputs:"Fictional patient · amount and timing uncertain · simulated urgent flag"},
+ {id:"missing",title:"Missing information needed to verify a dose",level:"warning",bodyKey:"unverified",reason:"Strength, formulation, prescribed amount, dose times and total taken are not all available.",next:"Check the package and prescription; ask a qualified healthcare professional before administration.",inputs:"Medicine entered · strength/formulation/timing incomplete"},
+ {id:"duplicate",title:"Duplicate active ingredients",level:"warning",bodyKey:"duplicateText",reason:"Two example products may contain the same active ingredient; names alone are not enough to confirm ingredient overlap.",next:"Compare active ingredients on both labels and ask a pharmacist/clinician before combining.",inputs:"Sample product A: paracetamol 500 mg · Sample cold product B: ingredient list must be checked"},
+ {id:"soon",title:"Medicine taken too soon after previous dose",level:"warning",bodyKey:"soonText",reason:"A product-specific dosing interval has not been clinically configured, so the app cannot verify the timing.",next:"Do not repeat the dose until the label or a qualified healthcare professional confirms the correct interval.",inputs:"Previous dose: 30 minutes ago · next dose request: now · simulation only"},
+ {id:"expiry",title:"Medicine approaching printed expiry",level:"warning",bodyKey:"expiryText",reason:"Sample printed expiry is within 7 days; always check the actual package date.",next:"Check the package. Do not use the product after its labelled expiry date.",inputs:"Sample tablets · printed expiry: 5 days from today"},
+ {id:"syrup",title:"Opened syrup past after-opening period",level:"critical",bodyKey:"syrupText",reason:"The sample entered use-by date is in the past. Actual allowed use depends on the product label/manufacturer instructions.",next:"Do not use this sample product; check the leaflet and consult a pharmacist. Never assume a universal after-opening duration.",inputs:"Sample syrup · opened 12 days ago · entered after-opening use-by date 2 days ago"},
+ {id:"storage",title:"Storage / after-opening instructions unclear",level:"warning",bodyKey:"storageText",reason:"The product-specific storage and in-use period are not available for verification.",next:"Check the manufacturer’s label/leaflet or ask a pharmacist before using it.",inputs:"Sample liquid medicine · storage and after-opening instructions not entered"},
+ {id:"amr",title:"Antimicrobial resistance education alert",level:"info",bodyKey:"amrText",reason:"This is an education message, not an individual diagnosis or antibiotic recommendation.",next:"Use antibiotics only as prescribed. Never share leftover antibiotics; ask a clinician about concerns.",inputs:"Education topic: inappropriate antibiotic use and antimicrobial resistance"}
+];
+function renderDemoScenarioPanel(){const body=$("#demoPanelBody");const chosen=DEMO_SCENARIOS.find(x=>x.id===demoState.activeScenario)||DEMO_SCENARIOS[0];let html=`<h3>${dt("choose")}</h3>`;for(const sc of DEMO_SCENARIOS){html+=`<button type="button" class="demo-scenario" data-scenario="${sc.id}" aria-pressed="${sc.id===chosen.id}"><strong>${escDemo(scenarioTitle(sc))}</strong><small>${escDemo(sc.inputs)}</small></button>`}
+ html+=`<div class="demo-form-grid" style="margin-top:12px"><div><label class="demo-label" for="demoAge">${dt("age")}</label><input id="demoAge" type="number" min="0" max="120" value="8"></div><div><label class="demo-label" for="demoWeight">${dt("weight")} (kg)</label><input id="demoWeight" type="number" min="0" max="400" step="0.1" value="30"></div><div><label class="demo-label" for="demoDrug">${dt("medicineName")}</label><input id="demoDrug" value="Paracetamol"></div><div><label class="demo-label" for="demoStrength">${dt("strength")}</label><input id="demoStrength" value="650 mg"></div><div><label class="demo-label" for="demoFormulation">${dt("formulation")}</label><select id="demoFormulation"><option>Tablet</option><option>Oral liquid / syrup</option><option>Capsule</option><option>Other / unknown</option></select></div><div><label class="demo-label" for="demoAmount">${dt("amount")}</label><input id="demoAmount" placeholder="Enter amount as written on prescription"></div><div><label class="demo-label" for="demoPrevious">${dt("lastDose")}</label><input id="demoPrevious" placeholder="Unknown / time and date"></div><div><label class="demo-label" for="demoTotal">${dt("total")}</label><input id="demoTotal" placeholder="Unknown / total amount"></div></div><div class="demo-actions"><button type="button" class="btn" id="runDemoSafety">${dt("run")}</button></div><div id="demoScenarioResult" class="demo-result ${chosen.level==='critical'?'critical':chosen.level==='info'?'info':''}" role="status"><strong>${dt("level")}: ${chosen.level.toUpperCase()}</strong><p>${chosen.id==="child650"?dt("warning"):(dt(chosen.bodyKey)||chosen.bodyKey)}</p><p><strong>${dt("reason")}:</strong> ${escDemo(chosen.reason)}</p><p><strong>${dt("next")}:</strong> ${escDemo(chosen.next)}</p><p class="demo-muted"><strong>${dt("inputs")}:</strong> ${escDemo(chosen.inputs)}</p><p class="demo-muted">${dt("simulated")}</p></div><p class="demo-muted"><strong>${dt("review")}:</strong> No clinical rule source/date is configured for this demo scenario. It intentionally does not label a dose safe or calculate a patient-specific recommendation.</p>`;
+ body.innerHTML=html;body.querySelectorAll("[data-scenario]").forEach(b=>b.addEventListener("click",()=>{demoState.activeScenario=b.dataset.scenario;renderDemoScenarioPanel()}));$("#runDemoSafety").addEventListener("click",runDemoSafetyCheck);
+}
+function scenarioTitle(sc){const keys={overdose:"scenarioOver",missing:"scenarioMissing",duplicate:"scenarioDuplicate",soon:"scenarioSoon",expiry:"scenarioExpiry",syrup:"scenarioSyrup",storage:"scenarioStorage",amr:"scenarioAmr"};if(sc.id==="child650")return dt("warning");return dt(keys[sc.id]||sc.title)}
+function runDemoSafetyCheck(){const sc=DEMO_SCENARIOS.find(x=>x.id===demoState.activeScenario)||DEMO_SCENARIOS[0];const age=Number($("#demoAge").value),weight=Number($("#demoWeight").value),drug=$("#demoDrug").value.trim(),strength=$("#demoStrength").value.trim(),form=$("#demoFormulation").value,amount=$("#demoAmount").value.trim(),previous=$("#demoPrevious").value.trim(),total=$("#demoTotal").value.trim();let level=sc.level,body=dt(sc.bodyKey),reason=sc.reason,next=sc.next;
+ if(sc.id==="child650"){level="warning";body=dt("warning");reason=`Age ${Number.isFinite(age)&&age>=0?age:"unknown"}; weight ${Number.isFinite(weight)&&weight>0?weight+" kg":"unknown"}; product ${drug||"not entered"}; strength ${strength||"unknown"}; formulation ${form||"unknown"}. This information alone cannot verify suitability.`;next="Do not treat this as a dosing recommendation. Verify the product, formulation, prescribed dose, timing, other medicines and total amount taken with a qualified healthcare professional before administration.";}
+ if(sc.id==="missing"){level="warning";body=dt("unverified");reason="One or more required details are missing. No validated rule is configured to infer a safe dose.";next="Complete the information from the actual label/prescription and ask a qualified healthcare professional. Never assume missing details."}
+ if(sc.id==="overdose"){level="critical";body=dt("possible");}
+ const el=$("#demoScenarioResult");el.className="demo-result "+(level==="critical"?"critical":level==="info"?"info":"");el.innerHTML=`<strong>${dt("level")}: ${level.toUpperCase()}</strong><p>${escDemo(body)}</p><p><strong>${dt("reason")}:</strong> ${escDemo(reason)}</p><p><strong>${dt("next")}:</strong> ${escDemo(next)}</p><p class="demo-muted"><strong>${dt("inputs")}:</strong> ${escDemo(`Age ${age||"unknown"}; weight ${weight||"unknown"} kg; ${drug||"medicine unknown"}; ${strength||"strength unknown"}; ${form}; amount ${amount||"missing"}; previous dose ${previous||"unknown"}; total ${total||"unknown"}`)}</p><p class="demo-muted">${dt("simulated")}</p>`;
+ demoState.actions.push({type:"safety_check",scenario:sc.id,level,at:new Date().toISOString()});renderDemoReports();
+}
+function renderDemoReports(){const b=$("#demoReportsBody");const items=[{level:"WARNING",title:"Paracetamol child example",detail:"Dose verification required; not a recommendation."},{level:"CRITICAL · SIMULATED",title:"Possible excessive amount",detail:"Seek urgent professional / poison-control advice if real."},{level:"WARNING · SIMULATED",title:"Opened syrup in-use date passed",detail:"Use product-specific label guidance."},{level:"INFO",title:"AMR education",detail:"Use antibiotics only as prescribed."},...demoState.actions.slice(-5).map(a=>({level:a.level||"INFO",title:a.type.replaceAll("_"," "),detail:`Local demo event · ${new Date(a.at).toLocaleString()}`}))];const bars=[{k:"chartDose",v:3},{k:"chartUrgent",v:1},{k:"chartExpiry",v:2},{k:"chartAmr",v:1}];b.innerHTML=`<div class="demo-table-wrap"><table class="demo-table"><thead><tr><th>Level</th><th>Alert / report</th><th>Details</th></tr></thead><tbody>${items.map(i=>`<tr><td><span class="demo-pill">${escDemo(i.level)}</span></td><td>${escDemo(i.title)}</td><td>${escDemo(i.detail)}</td></tr>`).join("")}</tbody></table></div><h3 style="margin:18px 0 8px">${dt("chartTitle")}</h3><div class="demo-chart" role="img" aria-label="${escDemo(dt("chartTitle"))}">${bars.map(x=>`<div class="demo-chart-row"><span>${escDemo(dt(x.k))}</span><div class="demo-chart-track"><div class="demo-chart-bar" style="width:${x.v/3*100}%"></div></div><strong>${x.v}</strong></div>`).join("")}</div><p class="demo-muted">${dt("noExternal")} ${dt("simulated")}</p>`}
+function renderDemoTranslationAudit(){
+ const lang=$("#demoLang").value||"en";const core=validateTranslations()[lang]||{total:0,missingCount:0};
+ const demoKeys=[...new Set(Object.values(DEMO_TRANSLATIONS).flatMap(x=>Object.keys(x)))];
+ const demoMissing=demoKeys.filter(k=>!DEMO_TRANSLATIONS[lang]?.[k]);
+ const el=$("#demoTranslationAudit");if(!el)return;
+ const missingList=demoMissing.slice(0,8).join(", ");
+ el.textContent=`Translation audit (${lang}): core dictionary ${core.missingCount}/${core.total} keys missing; demo strings ${demoMissing.length}/${demoKeys.length} unavailable. ${demoMissing.length?"Missing demo keys are explicitly marked as unavailable in the interface." : "Demo dictionary keys are present."}${missingList?" Example keys: "+missingList:""}`;
+}
+const DEMO_CATALOGUE=[{name:"Paracetamol",topic:"Pain/fever medicine; active ingredient and strength must be checked on the exact package. This demo does not recommend a dose."},{name:"Amoxicillin",topic:"Prescription antibiotic. Use only when prescribed; follow the prescriber’s instructions and do not share leftovers."},{name:"Antimicrobial resistance (AMR)",topic:"Occurs when microorganisms change so medicines no longer work as expected. Inappropriate antibiotic use can contribute."},{name:"Opened syrup",topic:"After-opening use period depends on the exact product and its instructions. Check the leaflet or ask a pharmacist; no universal duration is assumed."},{name:"Expiry tracking",topic:"Compare the printed package expiry with the product-specific after-opening use-by date. Use the earlier date for this demo reminder only."},{name:"Duplicate ingredients",topic:"Cold/combination products may share active ingredients with other medicines. Read each ingredient list and ask a pharmacist if unsure."}];
+function runDemoSearch(){const term=$("#demoMedicineSearch").value.trim().toLowerCase();demoState.searchTerm=term;const matches=DEMO_CATALOGUE.filter(x=>(x.name+" "+x.topic).toLowerCase().includes(term));$("#demoSearchResults").innerHTML=term&&matches.length?matches.map(m=>`<div class="demo-result info"><strong>${escDemo(m.name)}</strong><p>${escDemo(m.topic)}</p><span class="demo-muted">${dt("searchFound")} · Sample education only</span></div>`).join(""):`<p class="demo-muted">${dt("searchEmpty")}</p>`}
+function escDemo(v){return String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function showDemoView(view){const body=$("#demoPanelBody");if(view==="safety"){demoState.activeScenario="child650";renderDemoScenarioPanel();return}if(view==="accounts"){body.innerHTML=`<h3>${dt("sampleAccounts")}</h3><div class="demo-table-wrap"><table class="demo-table"><thead><tr><th>${dt("name")}</th><th>${dt("email")}</th><th>${dt("role")}</th><th>Sample ID</th></tr></thead><tbody>${demoState.accounts.map(a=>`<tr><td>${escDemo(a.name)}</td><td>${escDemo(a.email)}</td><td>${escDemo(a.role)}</td><td>${escDemo(a.id)}</td></tr>`).join("")}</tbody></table></div><form id="demoAccountForm"><div class="demo-form-grid"><div><label class="demo-label">${dt("name")}</label><input id="demoAccountName" required maxlength="60"></div><div><label class="demo-label">${dt("email")}</label><input id="demoAccountEmail" type="email" required></div><div><label class="demo-label">${dt("role")}</label><select id="demoAccountRole"><option>Patient</option><option>Doctor</option><option>Pharmacist</option></select></div><div><label class="demo-label">${dt("age")}</label><input id="demoAccountAge" type="number" min="0" max="120" value="30"></div></div><div class="demo-actions"><button class="btn" type="submit">${dt("create")}</button><button class="btn ghost" type="button" id="demoSaveProfileBtn">${dt("profile")}</button></div><hr style="border:0;border-top:1px solid #e5ebf2;margin:16px 0"><h3>${dt("login")}</h3><div class="demo-form-grid"><div><label class="demo-label" for="demoLoginEmail">${dt("email")}</label><input id="demoLoginEmail" type="email" autocomplete="off"></div><div><label class="demo-label" for="demoLoginPassword">Password (demo only)</label><input id="demoLoginPassword" type="password" autocomplete="off"></div></div><div class="demo-actions"><button class="btn ghost" type="button" id="demoLoginBtn">${dt("login")}</button></div></form><div id="demoAccountResult" aria-live="polite"></div>`;$("#demoAccountForm").addEventListener("submit",e=>{e.preventDefault();const name=$("#demoAccountName").value.trim(),email=$("#demoAccountEmail").value.trim();if(!name||!email){$("#demoAccountResult").textContent="Name and email are required.";return}const id=newId("DEMO");demoState.accounts.push({name,email,role:$("#demoAccountRole").value,id});demoState.createdCount++;demoState.actions.push({type:"account_created_local",level:"INFO",at:new Date().toISOString()});$("#demoAccountResult").innerHTML=`<div class="demo-result safe">${dt("created")}<p>Generated sample ID: <strong>${id}</strong></p></div>`;renderDemoAll();showDemoView("accounts")});$("#demoLoginBtn").onclick=()=>{const email=$("#demoLoginEmail").value.trim(),password=$("#demoLoginPassword").value;if(!email||!password){$("#demoAccountResult").innerHTML=`<div class="demo-result">Enter a sample email and password to test this local form. Do not use real credentials.</div>`;return}$("#demoAccountResult").innerHTML=`<div class="demo-result safe">${dt("logged")}<p>Fictional account only; credentials are not validated, sent, or stored.</p></div>`;demoState.actions.push({type:"login_simulated",level:"INFO",at:new Date().toISOString()});$("#demoLoginPassword").value="";renderDemoReports()};$("#demoSaveProfileBtn").onclick=()=>{demoState.profile.name=$("#demoAccountName").value.trim()||demoState.profile.name;demoState.profile.email=$("#demoAccountEmail").value.trim()||demoState.profile.email;demoState.profile.age=Number($("#demoAccountAge").value)||demoState.profile.age;demoState.actions.push({type:"profile_saved_local",level:"INFO",at:new Date().toISOString()});$("#demoAccountResult").innerHTML=`<div class="demo-result safe">${dt("saved")}</div>`;renderDemoReports()};return}
+ if(view==="medicine"){body.innerHTML=`<p>${dt("searchTitle")}. Use the search field in the next card.</p><div class="demo-actions"><button class="btn" type="button" id="demoJumpSearch">${dt("search")}</button></div>`;$("#demoJumpSearch").onclick=()=>{$("#demoMedicineSearch").focus();$("#demoMedicineSearch").scrollIntoView({behavior:"smooth",block:"center"})};return}
+ if(view==="expiry"){body.innerHTML=`<p class="demo-muted">${dt("expiryForm")}. These dates are examples only; use the package leaflet/pharmacist instructions for real products.</p><form id="demoExpiryForm"><div class="demo-form-grid"><div><label class="demo-label">${dt("medicineName")}</label><input id="demoExpiryName" required value="Sample syrup"></div><div><label class="demo-label">${dt("opened")}</label><input id="demoOpenedDate" type="date" required value="${daysAgo(12)}"></div><div><label class="demo-label">${dt("useBy")}</label><input id="demoUseByDate" type="date" required value="${daysAgo(2)}"></div><div><label class="demo-label">${dt("packExpiry")}</label><input id="demoPackExpiryDate" type="date" required value="${daysFrom(180)}"></div></div><div class="demo-actions"><button class="btn" type="submit">${dt("addExpiry")}</button></div></form><div id="demoExpiryResult"></div><div class="demo-table-wrap"><table class="demo-table"><thead><tr><th>${dt("medicineName")}</th><th>${dt("opened")}</th><th>${dt("useBy")}</th><th>${dt("packExpiry")}</th><th>Status</th></tr></thead><tbody>${demoState.opened.map(m=>`<tr><td>${escDemo(m.name)}</td><td>${escDemo(m.opened)}</td><td>${escDemo(m.useBy)}</td><td>${escDemo(m.expiry)}</td><td>${m.useBy<daysAgo(0)?'<span class="demo-danger">After-opening date passed</span>':'Check label'}</td></tr>`).join("")}</tbody></table></div>`;$("#demoExpiryForm").addEventListener("submit",e=>{e.preventDefault();const item={name:$("#demoExpiryName").value.trim(),opened:$("#demoOpenedDate").value,useBy:$("#demoUseByDate").value,expiry:$("#demoPackExpiryDate").value,instruction:"User-entered sample date; label instructions required."};if(!item.name||!item.opened||!item.useBy||!item.expiry)return;demoState.opened.push(item);demoState.actions.push({type:"expiry_item_added",level:"INFO",at:new Date().toISOString()});$("#demoExpiryResult").innerHTML=`<div class="demo-result info">${dt("savedExpiry")}<p>Earliest date: <strong>${escDemo([item.useBy,item.expiry].sort()[0])}</strong>. Check product-specific instructions.</p></div>`;renderDemoAll();showDemoView("expiry")});return}
+ if(view==="reports"){renderDemoReports();body.innerHTML=`<p>${dt("reportTitle")}. The report table below lists educational alerts and temporary local actions.</p><div class="demo-actions"><button class="btn" type="button" id="demoExportReport">Export sample report (CSV)</button></div>`;$("#demoExportReport").onclick=()=>{const rows=[["Level","Alert","Details"],["WARNING","Paracetamol child example","Verification required; not a dose recommendation"],["CRITICAL - SIMULATED","Possible excessive amount","Seek urgent professional advice if real"],["INFO","AMR education","Use antibiotics only as prescribed"],...demoState.actions.map(a=>[a.level||"INFO",a.type,a.at])];const csv=rows.map(r=>r.map(x=>'"'+String(x).replace(/"/g,'""')+'"').join(",")).join("\n");const blob=new Blob([csv],{type:"text/csv;charset=utf-8"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="AMR_GUARD_demo_report.csv";a.click();URL.revokeObjectURL(url);toast("Sample report exported; no patient data included.","ok")};return}
+}
+$("#launchDemoBtn").addEventListener("click",openDemoWorkspace);$("#exitDemoBtn").addEventListener("click",exitDemoWorkspace);$("#resetDemoBtn").addEventListener("click",resetDemo);$("#demoLang").addEventListener("change",()=>{state.lang=["en","hi","te"].includes($("#demoLang").value)?$("#demoLang").value:"en";localStorage.setItem("ab_lang",state.lang);renderDemoAll()});$("#demoSearchBtn").addEventListener("click",runDemoSearch);$("#demoClearSearchBtn").addEventListener("click",()=>{$("#demoMedicineSearch").value="";demoState.searchTerm="";$("#demoSearchResults").innerHTML=""});$$('[data-demo-view]').forEach(b=>b.addEventListener("click",()=>showDemoView(b.dataset.demoView)));
+
 /* ================= Boot ================= */
+validateTranslations();
 applyLang();
 applyKiosk();
 bindIdleReset();
